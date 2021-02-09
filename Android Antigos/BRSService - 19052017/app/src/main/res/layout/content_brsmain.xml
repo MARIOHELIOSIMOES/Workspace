@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.simoes.mario.brsservice.Interface.MainActivityBRS"
+    tools:showIn="@layout/activity_brsmain"
+    android:background="@color/Branco"
+    app:layout_collapseParallaxMultiplier="1.0">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:background="@color/Branco"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <ImageButton
+           android:id="@+id/img2"
+           android:layout_width="150dp"
+           android:layout_height="150dp"
+           android:layout_gravity="center"
+           android:background="@color/Branco"
+           android:scaleType="centerCrop"
+           android:src="@drawable/lupa" />
+       <TextView
+           android:text="Pesquisar"
+           android:layout_gravity="center"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+       <ImageButton
+           android:layout_width="@dimen/fab_grandes"
+           android:layout_height="@dimen/fab_grandes"
+           android:src="@drawable/atualizar3"
+           android:scaleType="fitXY"
+           android:background="@color/Branco"
+           android:layout_gravity="center_horizontal|center_vertical"
+           android:id="@+id/imgItens"
+           android:layout_margin="5dp"
+           />
+       <TextView
+           android:text="Atualizar"
+           android:layout_gravity="center"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="10dp"/>
+       <ImageButton
+           android:layout_width="@dimen/fab_grandes"
+           android:layout_height="@dimen/fab_grandes"
+           android:id="@+id/imgCadastro"
+           android:src="@drawable/cadastro"
+           android:scaleType="fitXY"
+           android:background="@color/Branco"
+           android:layout_gravity="center_horizontal|center_vertical"
+           />
+       <TextView
+           android:text="Cadastrar"
+           android:layout_gravity="center"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+   </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

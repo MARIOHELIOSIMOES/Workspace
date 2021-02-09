@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "559201820274",
+    "firebase_url": "https://controle-salarial.firebaseio.com",
+    "project_id": "controle-salarial",
+    "storage_bucket": "controle-salarial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559201820274:android:84d61b7ba94e8b96",
+        "android_client_info": {
+          "package_name": "simoes.mario.controlesalarial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559201820274-9c86oerr7nb6r89lf6c109794d92f3d3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1JE9QrOcsdAyGt5lHWHHWvyGZKydE4P8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559201820274-9c86oerr7nb6r89lf6c109794d92f3d3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

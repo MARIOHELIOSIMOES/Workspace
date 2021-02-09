@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_cad_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/logotipo"
+    tools:context="com.simoes.mario.brsservice.Interface.CadastroItem">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtItemCadTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Preto"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="4dp"
+                android:text="CADASTRO DE ITENS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/Branco"
+                android:textSize="30sp" />
+
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioGroup
+                        android:id="@+id/rgItens"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <RadioButton
+                            android:id="@+id/rbOleo"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/Branco"
+                            android:text="Óleo"
+                            android:textAlignment="center"
+                            android:textSize="25sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RadioGroup
+                                android:id="@+id/rgOles"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <RadioButton
+                                    android:id="@+id/rbMotor"
+                                    android:text="Motor"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/rbCambio"
+                                    android:text="Câmbio"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                               </RadioGroup>
+                        </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/rbFiltro"
+                            android:text="Filtro"
+                            android:textAlignment="center"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/Branco"
+                            android:layout_weight="1"
+                            android:textSize="25sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <RadioGroup
+                                android:id="@+id/rgFiltros"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <RadioButton
+                                    android:id="@+id/rbFoleo"
+                                    android:text="Óleo"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/rbFComb"
+                                    android:text="Combustível"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/rbFar"
+                                    android:text="Ar"
+                                    android:layout_weight="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/rbArcab"
+                                    android:text="Ar Cabine"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/content_cadastro_item"/>
+            </LinearLayout>
+        <android.support.v7.widget.CardView
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btnCadItem"
+        android:text="Salvar"
+        android:textColor="@color/Branco"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

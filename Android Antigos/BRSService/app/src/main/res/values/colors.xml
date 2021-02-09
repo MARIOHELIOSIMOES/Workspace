@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#086998</color>
+    <color name="colorPrimary">#303F9F</color>
+    <color name="fundoLayout">#e9e3e3</color>
+    <color name="Preto">#000000</color>
+    <color name="Vermelho">#e2040f</color>
+    <color name="LetraTitulo">#ffffff</color>
+    <color name="FundoTitulo">#e2040f</color>
+    <color name="Branco">#ffffff</color>
+</resources>

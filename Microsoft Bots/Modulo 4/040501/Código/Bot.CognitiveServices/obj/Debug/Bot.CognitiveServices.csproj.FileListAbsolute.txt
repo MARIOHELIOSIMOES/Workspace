@@ -1,0 +1,41 @@
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Bot Application.dll.config
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Bot Application.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Bot Application.pdb
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Autofac.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Chronic.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Bot.Builder.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Bot.Connector.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Newtonsoft.Json.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.Net.Http.Formatting.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.Web.Http.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.Web.Http.WebHost.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Autofac.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Bot.Builder.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.Bot.Connector.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\Newtonsoft.Json.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.Net.Http.Formatting.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.Web.Http.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\System.Web.Http.WebHost.xml
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\obj\Debug\Bot.CognitiveServices.csprojResolveAssemblyReference.cache
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\obj\Debug\Bot.CognitiveServices.csproj.CoreCompileInputs.cache
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\obj\Debug\Bot Application.dll
+C:\Users\MHS\Documents\Microsoft Bots\Modulo 4\040501\Código\Bot.CognitiveServices\obj\Debug\Bot Application.pdb

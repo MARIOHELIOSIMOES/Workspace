@@ -1,0 +1,204 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="simoes.mario.controlesalarial"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:22:9-38
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:8:5-66
+11-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:8:22-64
+12
+13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+14    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:26:5-79
+15-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:26:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:25:5-68
+16-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:25:22-65
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+17-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:26:22-107
+18    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+18-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
+18-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
+19    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+20    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+21    <application
+21-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:13:5-37:19
+22        android:allowBackup="true"
+22-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:14:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher_anubis"
+25-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:16:9-50
+26        android:label="@string/app_name"
+26-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:17:9-41
+27        android:testOnly="true"
+28        android:theme="@style/Theme.AppCompat" >
+28-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:15:9-47
+29        <activity
+29-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:19:9-27:20
+30            android:name="simoes.mario.controlesalarial.GUI.MainActivity"
+30-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:20:13-45
+31            android:label="@string/app_name" >
+31-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:21:13-45
+32            <intent-filter>
+32-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:22:13-26:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:23:17-69
+33-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:23:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:25:17-77
+35-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:25:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity
+38-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:28:9-31:16
+39            android:name="simoes.mario.controlesalarial.GUI.NovaDespesa"
+39-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:29:13-44
+40            android:label="Nova Despesa" />
+40-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:30:13-41
+41        <activity
+41-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:32:9-35:16
+42            android:name="simoes.mario.controlesalarial.GUI.NovoSalario"
+42-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:33:13-44
+43            android:label="Novo Salario" />
+43-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:34:13-41
+44        <activity android:name="simoes.mario.controlesalarial.GUI.Graficos" />
+44-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:36:9-50
+44-->C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:36:19-47
+45
+46        <service
+46-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:30:9-36:19
+47            android:name="com.google.firebase.components.ComponentDiscoveryService"
+47-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:31:13-84
+48            android:directBootAware="true"
+48-->[com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+49            android:exported="false" >
+49-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:32:13-37
+50            <meta-data
+50-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
+51                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+51-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
+52                android:value="com.google.firebase.components.ComponentRegistrar" />
+52-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+53            <meta-data
+53-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:20:13-22:85
+54                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+54-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:21:17-111
+55                android:value="com.google.firebase.components.ComponentRegistrar" />
+55-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:22:17-82
+56            <meta-data
+56-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:30:13-32:85
+57                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+57-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:31:17-139
+58                android:value="com.google.firebase.components.ComponentRegistrar" />
+58-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:32:17-82
+59            <meta-data
+59-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
+60                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+60-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
+61                android:value="com.google.firebase.components.ComponentRegistrar" />
+61-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
+62        </service>
+63
+64        <receiver
+64-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:29:9-33:20
+65            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+65-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:30:13-85
+66            android:enabled="true"
+66-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:31:13-35
+67            android:exported="false" >
+67-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:32:13-37
+68        </receiver>
+69        <receiver
+69-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:34:9-42:20
+70            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+70-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:35:13-100
+71            android:enabled="true"
+71-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:36:13-35
+72            android:exported="true"
+72-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:37:13-36
+73            android:permission="android.permission.INSTALL_PACKAGES" >
+73-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:38:13-69
+74            <intent-filter>
+74-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:39:13-41:29
+75                <action android:name="com.android.vending.INSTALL_REFERRER" />
+75-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:40:17-79
+75-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:40:25-76
+76            </intent-filter>
+77        </receiver>
+78
+79        <service
+79-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:44:9-47:40
+80            android:name="com.google.android.gms.measurement.AppMeasurementService"
+80-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:45:13-84
+81            android:enabled="true"
+81-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:46:13-35
+82            android:exported="false" />
+82-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:47:13-37
+83        <service
+83-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:48:9-52:72
+84            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+84-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:49:13-87
+85            android:enabled="true"
+85-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:50:13-35
+86            android:exported="false"
+86-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:51:13-37
+87            android:permission="android.permission.BIND_JOB_SERVICE" />
+87-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:52:13-69
+88
+89        <receiver
+89-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
+90            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+90-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
+91            android:exported="true"
+91-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
+92            android:permission="com.google.android.c2dm.permission.SEND" >
+92-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
+93            <intent-filter>
+93-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
+94                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+94-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
+94-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
+95            </intent-filter>
+96        </receiver>
+97
+98        <provider
+98-->[com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+99            android:name="com.google.firebase.provider.FirebaseInitProvider"
+99-->[com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+100            android:authorities="simoes.mario.controlesalarial.firebaseinitprovider"
+100-->[com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+101            android:exported="false"
+101-->[com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+102            android:initOrder="100" />
+102-->[com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+103
+104        <activity
+104-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+105            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+105-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+106            android:exported="false"
+106-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+107            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+107-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+108
+109        <meta-data
+109-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+110            android:name="com.google.android.gms.version"
+110-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+111            android:value="@integer/google_play_services_version" />
+111-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+112    </application>
+113
+114</manifest>

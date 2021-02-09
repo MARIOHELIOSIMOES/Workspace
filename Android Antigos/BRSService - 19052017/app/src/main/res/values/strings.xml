@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BRS Motor Service</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity__orcamento">Orçamento - BRS Motor Service</string>
+    <string name="title_activity_busca">Busca - BRS Motor Service</string>
+    <string name="title_activity_pesquisar">Pesquisar</string>
+    <string name="title_activity_cadastro_veiculos">Cadastro de Veículos</string>
+</resources>

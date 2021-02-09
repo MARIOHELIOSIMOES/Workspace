@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.segment.analytics.android.integrations:firebase:2.0.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.segment.analytics.android.integrations/firebase/2.0.0/c5ade90a9b957bb53fddbd4947eb41cc3e46ee1e/firebase-2.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.segment.analytics.android.integrations/firebase/2.0.0/93ada7f89b6570277305567adf25c772cf55d373/firebase-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

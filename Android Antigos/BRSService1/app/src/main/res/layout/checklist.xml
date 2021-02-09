@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.simoes.mario.brsservice.Interface.Activity_Orcamento"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.CardView
+            android:padding="@dimen/padding4dp"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutChecklist"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkOleoMotor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Óleo Motor"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnOleoMotor"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloOleoMotor"
+                            android:text="SW40"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoOleoMotor"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeOleoMotor"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/fundoLayout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkOleoCambio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Óleo Câmbio"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnOleoCambio"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloOleoCambio"
+                            android:text="SW40"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoOleoCambio"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeOleoCambio"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--
+                <LinearLayout
+                    android:background="@color/fundoLayout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkOleoDif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Óleo Diferencial"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnOleoDif"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloOleoDif"
+                            android:text="SW40"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoOleoDif"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeOleoDif"
+                            android:enabled="false"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkFiltroOleo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Filtro Óleo"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnFiltroOleo"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloFiltroOleo"
+                            android:text="X838"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoFiltroOleo"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeFiltroOleo"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:enabled="false"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/fundoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkFiltroComb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Filtro Combustível"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnFiltroComb"
+                            android:enabled="false"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloFiltroComb"
+                            android:text="X929"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoFiltroComb"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeFiltroComb"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkFiltroAr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Filtro Ar"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnFiltroAr"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:enabled="false"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloFiltroAr"
+                            android:text="A8383"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoFiltroAr"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeFiltroAr"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:enabled="false"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:background="@color/fundoLayout"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkFiltroArCab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Filtro Ar Cabine"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnFiltroArCab"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:enabled="false"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloFiltroArCab"
+                            android:text="A8383"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoFiltroArCab"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+
+                        <EditText
+                            android:id="@+id/edtQtdeFiltroArCab"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <CheckBox
+                        android:id="@+id/chkFiltroDH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Filtro D.H."
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/Vermelho" />
+                        <Spinner
+                            android:id="@+id/spnFiltroDH"
+                            android:layout_weight="1"
+                            android:enabled="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></Spinner>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txtModeloFiltroDH"
+                            android:text="SW40"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:inputType="numberDecimal"
+                            android:enabled="false"
+                            android:id="@+id/txtPrecoFiltroDH"
+                            android:layout_weight="1"
+                            android:text="R$ 20,00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1.3"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qtde"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Vermelho" />
+                        <EditText
+                            android:id="@+id/edtQtdeFiltroDH"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:enabled="false"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+                </LinearLayout>
+                -->
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="@color/Branco"
+            android:layout_gravity="bottom|end"/>
+        <!-- app:srcCompat="@android:drawable/ic_input_add" />
+         android:layout_margin="@dimen/fab_margin" -->
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

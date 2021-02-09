@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a1b12d9daf9c2f2d80b14053459194653485fbff">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_311a877752591ec5185cc1cc9f6b7c05084cfbb2\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\f08ea18a42e8563ce3cea70e36684bce2d5e6795\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d0a843615f3b5fa3a080497709f5436696149a09">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_ac8797fa20d60db7bdae98d1d50d73560f8f4183.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\44ea8c045573a849797ec219b80f02a82b7258bb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2a7ffe939ffd830b5d4052f3c1c4c235923790ce">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_1b83ae6ebf7e1e429465724c794a55152a763695.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\9b46303f90501a5707c0901503c47de71f8d5bca\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_0976cbc34ef953d9a9865ed3d4535731aa3ab52a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\3b74fd913c006ce028b99b07274c61bf70b4e206\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_05a32f6955e4e7e1e6f98a081697be2d2716893b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\44f801d3c86d39d6c86a27c40f0cb097ec3e87bc\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_fd494212d5ae2854d7146cbcc9a6be8d70ec83cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\a85405f8728cbc83d6ca33582e4d2ba60e771d0b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_fdfb65f22e57923eaf7ac9a063c0ca385a98344b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\a78f44db1df7fdb20160fe363af315e214f65446\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_ee4a10c3f76910fb4da9fa2740b7453e7ca2f5f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\d77d6d053f004acbbd6ae446200d5be24c8891c3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_043c48be35a490357e5dc3259057f5bf6b681a1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\2283c9ddf17745f0619352fd5154baa9ad5eda4e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4b42a61cd5924f28e95894e859e6abe57847e2f3">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_7e208062f805f2f775c1f61b8ff33bba97241c22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\0966259af2592791dedbd945071cea66efe125b3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="888983f51cf34f57a93ff16832552f2f15937212">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_626f0a9e6878731b2d8a97c30706d20eeb23a2ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\c2676234043a6b098b53e7af27dfd98a83be1b20\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_abcb6244cc5da22c9c8760e6d30dfc68e37af127.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\2da1b5a1beed7ece11956a036ab4d2c1d1b21984\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_246d25b859b56a625b7b703ae6f178e124db9605.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e2674f3760408b7713a182aa80eecc9de499f0c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\10fdfb9e2148f991f9ec97819ff474763e2e1775\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_a0e2a22ca6345dcc6c40885524dd747e4a79c514.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Projetos\ControleSalarialAnubis\app\libs\GraphView-3.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fde5ac3b4d45761447598d87b4c43cc4d143890a">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\GraphView-3.1.1_c44b2ccc251b6ee74e728e1d9d8a9eb58e767b52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\1197144d3989293229187b0999a007e213e6ce12\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_a52ec173b2d9bc490a9272d85a44554e91bb5257.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\3a2e65f66be5c095ba48d5c384defb5d2662bde2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_f1952316e9e637b7993fefa79057716a67132afc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\mario\.android\build-cache\abb9e9c4be86284d5c7da1fc7392d9240817a57f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\classes_4b55d4b5bfcd21ce8b07207a3faa8cc10b788e44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Projetos\ControleSalarialAnubis\app\libs\GraphView-3.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fde5ac3b4d45761447598d87b4c43cc4d143890a">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\GraphView-3.1.1_c44b2ccc251b6ee74e728e1d9d8a9eb58e767b52.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projetos\ControleSalarialAnubis\app\libs\GraphView-3.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fde5ac3b4d45761447598d87b4c43cc4d143890a">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\transforms\dex\debug\folders\1000\2\GraphView-3.1.1_c44b2ccc251b6ee74e728e1d9d8a9eb58e767b52\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\Projetos\ControleSalarialAnubis\app\libs\GraphView-3.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fde5ac3b4d45761447598d87b4c43cc4d143890a">
+        <dex dex="C:\Android\Projetos\ControleSalarialAnubis\app\build\intermediates\pre-dexed\debug\GraphView-3.1.1_c44b2ccc251b6ee74e728e1d9d8a9eb58e767b52.jar" />
+    </item>
+
+</items>

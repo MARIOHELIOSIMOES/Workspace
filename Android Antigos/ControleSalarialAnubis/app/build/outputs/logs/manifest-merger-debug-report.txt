@@ -1,0 +1,485 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1072170cb7a01d48bbb4db7159a17011\firebase-analytics-17.2.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\499ee013ccf82f0c8e373a42f49c1647\material-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\309206bc453739f1b4ae8a9e59ef8381\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0cb5df50b83c1a8044a22cf6e6c70091\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.recyclerview:recyclerview-selection:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\64d25cf494ba2ebee30e6c29f20451fc\recyclerview-selection-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\987971ae1f407d27e4ffb85bd3f36eb4\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\88f55c76e51eb97c6b05df8cb4ae54bb\play-services-measurement-sdk-17.2.2\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a0a36b01ff09f2bf9f8aa070a0fa82ab\firebase-auth-interop-18.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\be6b81119b5d0fed59ccada300324ad5\firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7bbbff531d1a5ad37e6a32dc07d50b76\firebase-iid-interop-17.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dd024e18af82c9a31147989ba6b982e5\play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\594eba53f21c03dc371bd1593ec672c0\play-services-measurement-base-17.2.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a48f3c2c868a99d5c58ad8955a1c2add\play-services-stats-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\26acf3e2764dfffd0264863f1d01c0ab\firebase-measurement-connector-18.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dbe0059e3856dd6591196adf461d521f\play-services-ads-identifier-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\19e23d9a02b06ad65002bc5db6d51548\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2a3f4efe61dbf6993f164824a291a6c8\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\97c3c2cda6c06384caaf27665e2a0823\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\47881e35deb9f1d2fd1c63e9c92ca062\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\fe3b5d1556f65181fca7e6f46226e747\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\c2ecbbfb2f51febb5c056db9e533ef90\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\66605a4b0ead7ea96947295304ae876f\transition-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\40a6968482196ccc0ea643a129527a5a\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\6a7d8b91e78884ae9a5be6358dcdecf0\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7dec51ddc7d3d93261bf882f923c4e7\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\9bf71ee9f4a098469b969e2ab8231eb5\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\591602dfb14390f4b22d679536af13d9\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3ad1e8d0300f9fa04d911c9c5c39c881\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\54fac980d7fac30735f4a76c19dd07f5\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bea75e1d74d5abc9d9565429551f784\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\42d40da4535ca747548202ffe5455136\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\94b01d413371dd00b175a23ca825c55b\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e6ab4540dd4013e000a7cc68d9832b5d\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\c426fe07ae7401b9124bf42bf70b7600\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\41b39526d1fe7461eae8c485cbaf09ab\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bdb5bf9841ace7bd2eb3221719d1d6d\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\313a30679a778e95abce23eaad06a9f0\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a26ab93ce34ca4285a20d4c1ebcf6fcb\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\321f5bd735bdb116d373f58295a1f285\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\48ed6acad578eae569282f5f62d3f5b4\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1f8a056f76aab6083142fabcd3ab7563\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2858329a90abae5f92af067402db6539\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\46ad41965346ee3db5d0b56c0dadb8b5\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\951eb0a3f9ec40a05c5037f42bf19f33\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\175bc7baf7900140c4a72a85c3ab3932\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\18f680779f659841c1f845a0a34f8aab\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2653f8fcba1fffd15231d8cce3ae2232\firebase-database-collection-17.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\fb0e798253c6753db831211a2ce21a2d\protolite-well-known-types-17.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3425e8883ad48fabf1d930b027bed483\grpc-android-1.21.0\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:1-39:12
+	package
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:4:5-44
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:8:5-66
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:8:22-64
+application
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:13:5-37:19
+MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1072170cb7a01d48bbb4db7159a17011\firebase-analytics-17.2.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1072170cb7a01d48bbb4db7159a17011\firebase-analytics-17.2.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\499ee013ccf82f0c8e373a42f49c1647\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\499ee013ccf82f0c8e373a42f49c1647\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0cb5df50b83c1a8044a22cf6e6c70091\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0cb5df50b83c1a8044a22cf6e6c70091\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\88f55c76e51eb97c6b05df8cb4ae54bb\play-services-measurement-sdk-17.2.2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\88f55c76e51eb97c6b05df8cb4ae54bb\play-services-measurement-sdk-17.2.2\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a0a36b01ff09f2bf9f8aa070a0fa82ab\firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a0a36b01ff09f2bf9f8aa070a0fa82ab\firebase-auth-interop-18.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7bbbff531d1a5ad37e6a32dc07d50b76\firebase-iid-interop-17.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7bbbff531d1a5ad37e6a32dc07d50b76\firebase-iid-interop-17.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dd024e18af82c9a31147989ba6b982e5\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dd024e18af82c9a31147989ba6b982e5\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\594eba53f21c03dc371bd1593ec672c0\play-services-measurement-base-17.2.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\594eba53f21c03dc371bd1593ec672c0\play-services-measurement-base-17.2.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a48f3c2c868a99d5c58ad8955a1c2add\play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a48f3c2c868a99d5c58ad8955a1c2add\play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\26acf3e2764dfffd0264863f1d01c0ab\firebase-measurement-connector-18.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\26acf3e2764dfffd0264863f1d01c0ab\firebase-measurement-connector-18.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dbe0059e3856dd6591196adf461d521f\play-services-ads-identifier-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dbe0059e3856dd6591196adf461d521f\play-services-ads-identifier-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bdb5bf9841ace7bd2eb3221719d1d6d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bdb5bf9841ace7bd2eb3221719d1d6d\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:17:9-41
+	android:icon
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:16:9-50
+	android:allowBackup
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:14:9-35
+	android:theme
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:15:9-47
+activity#simoes.mario.controlesalarial.GUI.MainActivity
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:19:9-27:20
+	android:label
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:21:13-45
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:20:13-45
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:25:27-74
+activity#simoes.mario.controlesalarial.GUI.NovaDespesa
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:28:9-31:16
+	android:label
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:30:13-41
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:29:13-44
+activity#simoes.mario.controlesalarial.GUI.NovoSalario
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:32:9-35:16
+	android:label
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:34:13-41
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:33:13-44
+activity#simoes.mario.controlesalarial.GUI.Graficos
+ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:36:9-50
+	android:name
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml:36:19-47
+uses-sdk
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1072170cb7a01d48bbb4db7159a17011\firebase-analytics-17.2.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1072170cb7a01d48bbb4db7159a17011\firebase-analytics-17.2.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\499ee013ccf82f0c8e373a42f49c1647\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\499ee013ccf82f0c8e373a42f49c1647\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\309206bc453739f1b4ae8a9e59ef8381\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\309206bc453739f1b4ae8a9e59ef8381\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0cb5df50b83c1a8044a22cf6e6c70091\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0cb5df50b83c1a8044a22cf6e6c70091\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.recyclerview:recyclerview-selection:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\64d25cf494ba2ebee30e6c29f20451fc\recyclerview-selection-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview-selection:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\64d25cf494ba2ebee30e6c29f20451fc\recyclerview-selection-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\987971ae1f407d27e4ffb85bd3f36eb4\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\987971ae1f407d27e4ffb85bd3f36eb4\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\88f55c76e51eb97c6b05df8cb4ae54bb\play-services-measurement-sdk-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\88f55c76e51eb97c6b05df8cb4ae54bb\play-services-measurement-sdk-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a0a36b01ff09f2bf9f8aa070a0fa82ab\firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a0a36b01ff09f2bf9f8aa070a0fa82ab\firebase-auth-interop-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\be6b81119b5d0fed59ccada300324ad5\firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\be6b81119b5d0fed59ccada300324ad5\firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7bbbff531d1a5ad37e6a32dc07d50b76\firebase-iid-interop-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\7bbbff531d1a5ad37e6a32dc07d50b76\firebase-iid-interop-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dd024e18af82c9a31147989ba6b982e5\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dd024e18af82c9a31147989ba6b982e5\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\594eba53f21c03dc371bd1593ec672c0\play-services-measurement-base-17.2.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\594eba53f21c03dc371bd1593ec672c0\play-services-measurement-base-17.2.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a48f3c2c868a99d5c58ad8955a1c2add\play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a48f3c2c868a99d5c58ad8955a1c2add\play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\26acf3e2764dfffd0264863f1d01c0ab\firebase-measurement-connector-18.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\26acf3e2764dfffd0264863f1d01c0ab\firebase-measurement-connector-18.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dbe0059e3856dd6591196adf461d521f\play-services-ads-identifier-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\dbe0059e3856dd6591196adf461d521f\play-services-ads-identifier-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\19e23d9a02b06ad65002bc5db6d51548\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\19e23d9a02b06ad65002bc5db6d51548\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2a3f4efe61dbf6993f164824a291a6c8\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2a3f4efe61dbf6993f164824a291a6c8\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\97c3c2cda6c06384caaf27665e2a0823\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\97c3c2cda6c06384caaf27665e2a0823\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\47881e35deb9f1d2fd1c63e9c92ca062\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\47881e35deb9f1d2fd1c63e9c92ca062\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\fe3b5d1556f65181fca7e6f46226e747\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\fe3b5d1556f65181fca7e6f46226e747\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\c2ecbbfb2f51febb5c056db9e533ef90\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\c2ecbbfb2f51febb5c056db9e533ef90\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\66605a4b0ead7ea96947295304ae876f\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\66605a4b0ead7ea96947295304ae876f\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\40a6968482196ccc0ea643a129527a5a\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\40a6968482196ccc0ea643a129527a5a\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\6a7d8b91e78884ae9a5be6358dcdecf0\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\6a7d8b91e78884ae9a5be6358dcdecf0\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7dec51ddc7d3d93261bf882f923c4e7\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7dec51ddc7d3d93261bf882f923c4e7\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\9bf71ee9f4a098469b969e2ab8231eb5\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\9bf71ee9f4a098469b969e2ab8231eb5\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\591602dfb14390f4b22d679536af13d9\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\591602dfb14390f4b22d679536af13d9\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3ad1e8d0300f9fa04d911c9c5c39c881\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3ad1e8d0300f9fa04d911c9c5c39c881\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\54fac980d7fac30735f4a76c19dd07f5\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\54fac980d7fac30735f4a76c19dd07f5\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bea75e1d74d5abc9d9565429551f784\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bea75e1d74d5abc9d9565429551f784\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\42d40da4535ca747548202ffe5455136\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\42d40da4535ca747548202ffe5455136\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\94b01d413371dd00b175a23ca825c55b\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\94b01d413371dd00b175a23ca825c55b\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e6ab4540dd4013e000a7cc68d9832b5d\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e6ab4540dd4013e000a7cc68d9832b5d\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\d5153728d08d09e207d7eae0711a020d\core-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\c426fe07ae7401b9124bf42bf70b7600\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\c426fe07ae7401b9124bf42bf70b7600\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\41b39526d1fe7461eae8c485cbaf09ab\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\41b39526d1fe7461eae8c485cbaf09ab\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bdb5bf9841ace7bd2eb3221719d1d6d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\8bdb5bf9841ace7bd2eb3221719d1d6d\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\313a30679a778e95abce23eaad06a9f0\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\313a30679a778e95abce23eaad06a9f0\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a26ab93ce34ca4285a20d4c1ebcf6fcb\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a26ab93ce34ca4285a20d4c1ebcf6fcb\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\321f5bd735bdb116d373f58295a1f285\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\321f5bd735bdb116d373f58295a1f285\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\48ed6acad578eae569282f5f62d3f5b4\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\48ed6acad578eae569282f5f62d3f5b4\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1f8a056f76aab6083142fabcd3ab7563\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\1f8a056f76aab6083142fabcd3ab7563\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2858329a90abae5f92af067402db6539\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2858329a90abae5f92af067402db6539\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\46ad41965346ee3db5d0b56c0dadb8b5\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\46ad41965346ee3db5d0b56c0dadb8b5\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\951eb0a3f9ec40a05c5037f42bf19f33\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\951eb0a3f9ec40a05c5037f42bf19f33\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\175bc7baf7900140c4a72a85c3ab3932\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\175bc7baf7900140c4a72a85c3ab3932\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\18f680779f659841c1f845a0a34f8aab\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\18f680779f659841c1f845a0a34f8aab\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2653f8fcba1fffd15231d8cce3ae2232\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\2653f8fcba1fffd15231d8cce3ae2232\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\fb0e798253c6753db831211a2ce21a2d\protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\fb0e798253c6753db831211a2ce21a2d\protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3425e8883ad48fabf1d930b027bed483\grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3425e8883ad48fabf1d930b027bed483\grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:22:9-38
+	android:minSdkVersion
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+		ADDED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\PROJETOS\ControleSalarialAnubis\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:24:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3425e8883ad48fabf1d930b027bed483\grpc-android-1.21.0\AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\3425e8883ad48fabf1d930b027bed483\grpc-android-1.21.0\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:26:22-76
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:32:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:31:13-84
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\a5db8469ab56c29221f7242846a6832b\firebase-storage-19.1.1\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:21.4.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\918fc0d18f95b0506afbaf3eab7900b7\firebase-firestore-21.4.0\AndroidManifest.xml:21:17-111
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\73cdb69a6b053b07a0be6f169ad56796\play-services-measurement-sdk-api-17.2.2\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:25:22-65
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\98aaae0df532cf0a7917c8ea6bedfc9b\play-services-measurement-impl-17.2.2\AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\0c4827fc073b3999122894440787053d\play-services-measurement-17.2.2\AndroidManifest.xml:49:13-87
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\e7edc7550e0b383ca307882c53f20859\play-services-measurement-api-17.2.2\AndroidManifest.xml:31:17-139
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:20.0.2] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\4248f817980373cf6f6f01883a6cf4d1\firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\000bbfa807056b9e22c0e18f33996246\firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\ae14e89ee3e9947d499d32f39e9eb6eb\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\mario\.gradle\caches\transforms-2\files-2.1\701e15d2387eaa79f04cfeeb5767fb1c\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58

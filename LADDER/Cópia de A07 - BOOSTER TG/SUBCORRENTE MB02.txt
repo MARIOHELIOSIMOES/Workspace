@@ -1,0 +1,14 @@
+Possível local do erro:
+
+Análise_EAT1
+
+	final do arquivo, subcorrente da MB02 está com o valor de Q01 deveria ser Q04,
+precisa confirmar no local
+	
+
+
+CMD
+	zera falha inversor está na Q01 e Q02 (Precisa confirmar no local ou com o Adriano)
+
+
+

@@ -7,11 +7,11 @@ public class TrabalhandoComDatas {
     
     public static void main(String[] args) { //Primeiro método chamado - Padrão JAVA
         
-        TrabalhandoComDatas tdadas = new TrabalhandoComDatas(); //Criando uma instância da classe com o construtor padrão
-        tdadas.ImprimirNoConsole(tdadas.getDataString()); // Mostrar Data Atual
-        tdadas.ImprimirNoConsole(tdadas.getHorarioString()); //MostrarHora
-        tdadas.setData(30, 1, 2021); //Setando uma data
-        tdadas.setHorario(15, 33); //setando um horário
+        TrabalhandoComDatas tdadas = new TrabalhandoComDatas(); //Criando uma instância da classe com o construtor padrão (linha 22)
+        tdadas.ImprimirNoConsole(tdadas.getDataString()); // Mostrar Data Atual (linha 28)
+        tdadas.ImprimirNoConsole(tdadas.getHorarioString()); //MostrarHora (linha 31)
+        tdadas.setData(30, 1, 2021); //Setando uma data (linha 34)
+        tdadas.setHorario(15, 33); //setando um horário (linha 40)
         tdadas.ImprimirNoConsole("Salvar no Banco Dados: "+tdadas.getTimeMilisegundos()); //Sugestão de formato para salvar no BD
         
     }

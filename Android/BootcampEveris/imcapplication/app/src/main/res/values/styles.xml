@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TitlePurple">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/purple_700</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

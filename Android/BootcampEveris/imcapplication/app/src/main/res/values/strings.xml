@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">imcapplication</string>
+    <string name="checkbox">Checkbox</string>
+    <string name="imc">IMC</string>
+    <string name="inputpeso">Insira seu peso em kilograma: (ex: 92kg)</string>
+    <string name="inputaltura">Insira sua altura cm: (ex: 181cm):</string>
+    <string name="calcular">Calcular</string>
+</resources>

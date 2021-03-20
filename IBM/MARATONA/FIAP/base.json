@@ -1,0 +1,7 @@
+{
+    "author": "Autor/Autora do conteúdo",
+    "body": "Corpo do conteúdo (transcrição da palestra ou todo o corpo de um artigo)",
+    "title": "Título da palestra ou artigo",
+    "type": "Tipo do conteúdo (deve ser exatamente article ou video)",
+    "url": "URL onde o conteúdo foi acessado"
+  }

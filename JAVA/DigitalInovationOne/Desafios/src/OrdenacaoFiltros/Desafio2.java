@@ -1,6 +1,40 @@
 package OrdenacaoFiltros;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Desafio2 {
+
+    public static void main (String[] ars){
+
+        Scanner scanner = new Scanner(System.in);
+       // System.out.print("informe o tamanho da lista: ");
+        int tamanho = Integer.parseInt(scanner.nextLine()); //quantidade listas que serão inputadas
+
+        String[] listas = new String[tamanho];
+
+        for(int i = 0; i < tamanho; i++){
+       //     System.out.printf("informe o valor %d: ", i);
+            listas[i] = scanner.nextLine();
+        }
+        for (String lista: listas){
+            String [] l = lista.split(" ");
+        //    System.out.println("Ordenando Lista");
+            Arrays.sort(l);
+            ArrayList<String> impressos = new ArrayList<>();
+            for (String s: l){
+                if(impressos.contains(s)){
+                    continue;
+                }
+                System.out.print(s+" ");
+                impressos.add(s);
+            }
+            System.out.println("");
+        }
+
+    }
+
 }
 /**
  * Desafio
@@ -33,8 +67,5 @@ public class Desafio2 {
  *
  * carne laranja picles suco
  * laranja pera
- *
- *
- *
  *
  * */

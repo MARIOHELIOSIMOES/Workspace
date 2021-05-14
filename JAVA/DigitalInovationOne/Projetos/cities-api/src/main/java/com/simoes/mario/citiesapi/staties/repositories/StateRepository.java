@@ -1,0 +1,8 @@
+package com.simoes.mario.citiesapi.staties.repositories;
+
+
+import com.simoes.mario.citiesapi.staties.entities.State;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StateRepository extends JpaRepository<State, Long> {
+}

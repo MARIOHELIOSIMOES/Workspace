@@ -1,6 +1,5 @@
 package com.simoes.mario.citiesapi.countries;
 
-import com.simoes.mario.citiesapi.countries.Country;
 import com.simoes.mario.citiesapi.countries.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,11 +24,11 @@ public class CountryResource {
         return repository.findAll();
     }
 
-    @GetMapping
-    public List<Country> countries(Page page){
-        return repository.findAll();
+   /* @GetMapping
+    public Page<Country> countries(Page page){
+        return (Page<Country>) repository.findAll();
     }
-
+*/
     @GetMapping("/{id}")
     public ResponseEntity getOne(@PathVariable Long id){
         Optional<Country> optional =repository.findById(id);

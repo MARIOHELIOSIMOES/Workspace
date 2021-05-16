@@ -1,4 +1,4 @@
-package com.simoes.mario.citiesapi.staties.entities;
+package com.simoes.mario.citiesapi.states.entities;
 
 import com.simoes.mario.citiesapi.countries.Country;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;

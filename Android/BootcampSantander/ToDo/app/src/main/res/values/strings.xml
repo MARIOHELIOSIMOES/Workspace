@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ToDo</string>
+    <string name="lbl_new_task">Criar tarefas</string>
+    <string name="lbl_title">Titulo</string>
+    <string name="lbl_date">data</string>
+    <string name="lbl_hour">hora</string>
+    <string name="lbl_cancel">Cancelar</string>
+    <string name="lbl_create">Criar</string>
 </resources>

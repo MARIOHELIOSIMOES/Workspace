@@ -12,6 +12,7 @@ public class Desafio {
 
 
     }
+    // Método para dobrar os valores do array conforme solicitado no exercício
     public int[] doubleTheChances(int[] chances){
         int[] chances2 = new int[chances.length]; //cria novo array com tamanho fixo
         for(int i = 0; i< chances.length; i++){ //itera pelo array
@@ -19,6 +20,8 @@ public class Desafio {
         }
         return chances2; // retorna o array
     }
+
+    //Método de teste para imprimir os valores do array no console
     public void imprimirArray(int[] array){
         System.out.println("Imprimindo array..");
         for (int valor: array){

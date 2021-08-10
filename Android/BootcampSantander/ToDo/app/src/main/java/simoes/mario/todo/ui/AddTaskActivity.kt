@@ -57,6 +57,7 @@ class AddTaskActivity : AppCompatActivity(){
             date = binding.tilData.text)
             TaskDataSoucer.insertTask(task)
             Log.e("TAG", "insertListener " + TaskDataSoucer.getList())
+            finish()
         }
         binding.btnCancelar.setOnClickListener {
             finish()

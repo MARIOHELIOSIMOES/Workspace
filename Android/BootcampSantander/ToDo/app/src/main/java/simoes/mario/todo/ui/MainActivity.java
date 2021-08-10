@@ -1,4 +1,4 @@
-package simoes.mario.todo;
+package simoes.mario.todo.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,11 +10,16 @@ import simoes.mario.todo.ui.AddTaskActivity;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    TaskListAdapter listAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
          binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        listAdapter = new TaskListAdapter();
+        binding.rvLista.setAdapter(listAdapter);
+
         insertListeners();
 
     }
@@ -26,4 +31,6 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
     }
+
+    /*continuar no video 'mostrando a lista de tarefas'*/
 }

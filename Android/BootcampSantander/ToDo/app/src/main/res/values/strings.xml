@@ -6,4 +6,5 @@
     <string name="lbl_hour">hora</string>
     <string name="lbl_cancel">Cancelar</string>
     <string name="lbl_create">Criar</string>
+    <string name="task">Tarefa</string>
 </resources>

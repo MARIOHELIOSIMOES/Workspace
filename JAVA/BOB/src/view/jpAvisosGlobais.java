@@ -1,0 +1,323 @@
+package view;
+
+import control.AvisoControl;
+import control.VeiculoControl;
+import java.awt.GridLayout;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import model.Auxiliar;
+import model.Aviso;
+import model.Caminhao;
+import model.DefaultTableModelNaoEditavel;
+import model.GraficoItem;
+import model.Veiculo;
+
+/**
+ *
+ * @author mario
+ */
+public class jpAvisosGlobais extends javax.swing.JPanel {
+
+    Veiculo veiculo;
+    Auxiliar aux;
+    ArrayList<Aviso> arrayList;
+    AvisoControl ac;
+    VeiculoControl vCtrol;
+    ArrayList<Veiculo> arrayVeiculo;
+    
+    public jpAvisosGlobais() {
+        inicializar();
+        atualizarTela();
+    }
+   
+    private void inicializar(){
+        initComponents();
+        //veiculo = new Veiculo();
+        aux = new Auxiliar();
+        arrayList = new ArrayList<>();
+        ac = new AvisoControl();
+        vCtrol = new VeiculoControl();
+        arrayVeiculo = vCtrol.getArrayListTodosVeiculos();
+    }
+    private void atualizarTela(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                
+                
+            }
+        }).start();
+        lblNAtivosTotal.setText(ac.getNAtivos()+"");
+        preencherTabela();
+        preencherGrafico();
+    }
+    private void preencherArrayList(){
+        try{
+            arrayList.clear();
+            if(chAtivos.isSelected()){
+                arrayList.addAll(ac.getArrayListAtivosInativo(true));
+            }
+            if(chInativos.isSelected()){
+                arrayList.addAll(ac.getArrayListAtivosInativo(false));
+            }
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "jpAvisos.preencherArrayList");
+        }
+    }
+    private void preencherGrafico(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+               ArrayList<GraficoItem> arraygrafico = ac.getArrayGraficoCategoria();
+                jpGrafico.removeAll();
+                jpGrafico.setLayout(new GridLayout(1,1));
+                jpGrafico.add(new jpGraficoBarraSimples("", arraygrafico));
+                jpGrafico.revalidate();
+            }
+        }).start();
+    }
+    private void preencherTabela(){
+        DefaultTableModel model = new DefaultTableModelNaoEditavel();
+        TableRowSorter tableSorter = new TableRowSorter(model);
+        
+        try{
+            model.addColumn("N");//1
+            model.addColumn("Placa");//2
+            model.addColumn("Tipo");//3
+            model.addColumn("Marca");//4
+            model.addColumn("Modelo");//5
+            model.addColumn("ID");//6
+            model.addColumn("Data");//7
+            model.addColumn("Título");//8
+            model.addColumn("Mensagem");//9
+            model.addColumn("Status");//10
+            
+            preencherArrayList();
+            
+            
+            Object[] linha = new Object[10];
+            Veiculo veiculo;
+            for(int i = arrayList.size()-1; i >=0; i--){
+                veiculo = getVeiculoById(arrayList.get(i).getIdveiculo());
+                linha[0]= (i+1);
+                linha[1]= veiculo.getPlaca();
+                linha[2]=Veiculo.TIPOS_STRING[veiculo.getTipo()];
+                linha[3]= veiculo.getMarca();
+                linha[4]= veiculo.getModelo();
+                linha[5]= arrayList.get(i).getId();
+                linha[6]= aux.getDataString(arrayList.get(i).getDatamilis());
+                linha[7]= arrayList.get(i).getTitulo();
+                linha[8]= arrayList.get(i).getMensagem();
+                linha[9]= (arrayList.get(i).isAtivo()? "Ativo":"Inativo");
+                model.addRow(linha);
+            }
+            tableSorter = new TableRowSorter(model);
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "jpAvisos.preencherTabela");
+        }finally{
+            jTable.setModel(model);
+            jTable.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTable.getColumnModel().getColumn(6).setMaxWidth(90);
+            jTable.getColumnModel().getColumn(2).setMaxWidth(90);
+            jTable.getColumnModel().getColumn(9).setMaxWidth(70);
+            jTable.getColumnModel().getColumn(5).setMaxWidth(60);
+            jTable.getColumnModel().getColumn(1).setMaxWidth(70);
+            jTable.setRowSorter(tableSorter);
+            tableSorter.toggleSortOrder(2); 
+            
+        }
+        
+    }
+    private Veiculo getVeiculoById(int idveiculo){
+        
+        Veiculo v = new Caminhao();
+        for(Veiculo veiculo: arrayVeiculo){
+            if(veiculo.getId()==idveiculo){
+                v = veiculo;
+            }
+        }
+        return v;
+        
+    }
+    
+    
+    
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jpTabela = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable = new javax.swing.JTable();
+        chAtivos = new javax.swing.JCheckBox();
+        chInativos = new javax.swing.JCheckBox();
+        jPanel3 = new javax.swing.JPanel();
+        lblNAtivosTotal = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jpGrafico = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Avisos da Frota");
+        jLabel1.setOpaque(true);
+
+        jpTabela.setBackground(new java.awt.Color(255, 255, 255));
+        jpTabela.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Avisos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
+
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(jTable);
+
+        chAtivos.setBackground(new java.awt.Color(255, 255, 255));
+        chAtivos.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
+        chAtivos.setSelected(true);
+        chAtivos.setText("Ativos");
+        chAtivos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                chAtivosItemStateChanged(evt);
+            }
+        });
+
+        chInativos.setBackground(new java.awt.Color(255, 255, 255));
+        chInativos.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
+        chInativos.setText("Inativos");
+        chInativos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                chInativosItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpTabelaLayout = new javax.swing.GroupLayout(jpTabela);
+        jpTabela.setLayout(jpTabelaLayout);
+        jpTabelaLayout.setHorizontalGroup(
+            jpTabelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpTabelaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(chAtivos)
+                .addGap(18, 18, 18)
+                .addComponent(chInativos)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
+        );
+        jpTabelaLayout.setVerticalGroup(
+            jpTabelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpTabelaLayout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(jpTabelaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chAtivos)
+                    .addComponent(chInativos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações Gerais", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
+
+        lblNAtivosTotal.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        lblNAtivosTotal.setForeground(new java.awt.Color(255, 64, 129));
+        lblNAtivosTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNAtivosTotal.setText("15");
+
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(127, 127, 127));
+        jLabel3.setText("Ativos");
+
+        jpGrafico.setBackground(new java.awt.Color(204, 204, 204));
+        jpGrafico.setLayout(new java.awt.GridLayout(1, 0));
+
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel11.setText("Total Ativos");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(jpGrafico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblNAtivosTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jpGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblNAtivosTotal)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpTabela, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpTabela, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void chAtivosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_chAtivosItemStateChanged
+        preencherTabela();
+    }//GEN-LAST:event_chAtivosItemStateChanged
+
+    private void chInativosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_chInativosItemStateChanged
+       preencherTabela();
+    }//GEN-LAST:event_chInativosItemStateChanged
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox chAtivos;
+    private javax.swing.JCheckBox chInativos;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable;
+    private javax.swing.JPanel jpGrafico;
+    private javax.swing.JPanel jpTabela;
+    private javax.swing.JLabel lblNAtivosTotal;
+    // End of variables declaration//GEN-END:variables
+}

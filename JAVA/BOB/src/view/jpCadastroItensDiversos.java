@@ -4,6 +4,7 @@ import control.ItemControl;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JPanel;
+import model.Auxiliar;
 import model.Item;
 import model.Pedido;
 
@@ -18,6 +19,7 @@ public class jpCadastroItensDiversos extends javax.swing.JPanel {
     ArrayList<Item> arraylist;
     Object jpPai;
     int tipoPedido=-1;
+    Auxiliar aux;
     public jpCadastroItensDiversos() {
         inicializar();
     }
@@ -65,6 +67,7 @@ public class jpCadastroItensDiversos extends javax.swing.JPanel {
     
     private void inicializar(){
         initComponents();
+        aux = new Auxiliar();
         preencherCbbTipo();
         preencherListView(tipos);
         limparCampos();
@@ -350,6 +353,11 @@ public class jpCadastroItensDiversos extends javax.swing.JPanel {
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        
+        if(!jfPrincipal.isUserOperaOrAdmin()){
+            aux.showMessagemSemPermissao();
+            return;
+        }
         String id, marca, modelo, valor,info;
         
         id = txfId.getText();

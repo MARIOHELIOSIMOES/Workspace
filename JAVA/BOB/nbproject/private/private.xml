@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Projetos/Netbeans/BOB/src/data/VeiculoPneuDAO.java</file>
-            <file>file:/C:/Projetos/Netbeans/BOB/src/control/VeiculoPneuControl.java</file>
+            <file>file:/C:/Projetos/Netbeans/BOB/src/model/Veiculo.java</file>
             <file>file:/C:/Projetos/Netbeans/BOB/src/view/jpPneu.java</file>
-            <file>file:/C:/Projetos/Netbeans/BOB/src/model/VeiculoPneu.java</file>
-            <file>file:/C:/Projetos/Netbeans/BOB/src/view/jpCustoPneu.java</file>
+            <file>file:/C:/Projetos/Netbeans/BOB/src/view/jpCadastroVeiculo.java</file>
             <file>file:/C:/Projetos/Netbeans/BOB/src/view/jpDetalheVeiculo.java</file>
+            <file>file:/C:/Projetos/Netbeans/BOB/src/control/VeiculoPreventivaControl.java</file>
+            <file>file:/C:/Projetos/Netbeans/BOB/src/view/jpCustoPneu.java</file>
         </group>
     </open-files>
 </project-private>

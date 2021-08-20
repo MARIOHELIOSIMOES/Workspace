@@ -6,7 +6,6 @@ import model.Auxiliar;
 import model.Item;
 import model.Pedido;
 import model.PedidoItem;
-import model.VeiculoKM;
 import model.VeiculoPreventiva;
 
 public class VeiculoPreventivaControl {
@@ -102,22 +101,27 @@ public class VeiculoPreventivaControl {
     public boolean atualizarPreventivaByPedido(Pedido pedido, ArrayList<VeiculoPreventiva> vpfuturas){
         try{
             int[] ids = new int[pedido.getArraylist().size()];
+            
             int i =0;
             for(PedidoItem pi: pedido.getArraylist()){
                 ids[i]=pi.getIdItem();
                 i++;
             }
+            i = 0;
             ArrayList<Item> arraylistItems = itemCtrol.getArrayListIDS(ids);
-            
+            int[] tipos = new int[arraylistItems.size()];
             if(arraylistItems.size()>0){
                 String tiposString = " ";
                 for(Item item: arraylistItems){
                     tiposString +=item.getTipo()+", ";
+                    tipos[i] = item.getTipo();
+                    i++;
                 }
                 tiposString+=arraylistItems.get(0).getTipo();
                 if(vpd.AlterarPedido(pedido.getId_veiculo(), pedido.getId(), tiposString)){
                     vpd.InserirArray(vpfuturas);
                 }
+                new AvisoControl().excluirByIdVeiculoAndByTitulo(pedido.getId_veiculo(), tipos);
             }
         }catch(Exception e){
             

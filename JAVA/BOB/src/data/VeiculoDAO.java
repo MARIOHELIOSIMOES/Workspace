@@ -1,6 +1,8 @@
 package data;
 
 import java.util.ArrayList;
+import model.Caminhao;
+import model.Carro;
 import model.Veiculo;
 
 public class VeiculoDAO extends  ConectionDAO{
@@ -35,7 +37,7 @@ public class VeiculoDAO extends  ConectionDAO{
             stmt.setString(2, veiculo.getMarca());
             stmt.setString(3, veiculo.getModelo());
             stmt.setInt(4, veiculo.getAno());
-            stmt.setString(5, veiculo.getTipo());
+            stmt.setInt(5, veiculo.getTipo());
             stmt.setString(6, veiculo.getCarroceria());
             stmt.setInt(7, veiculo.getConfiguracao());
             stmt.setString(8, veiculo.getInfo());
@@ -64,7 +66,7 @@ public class VeiculoDAO extends  ConectionDAO{
             stmt.setString(2, veiculo.getMarca());
             stmt.setString(3, veiculo.getModelo());
             stmt.setInt(4, veiculo.getAno());
-            stmt.setString(5, veiculo.getTipo());
+            stmt.setInt(5, veiculo.getTipo());
             stmt.setString(6, veiculo.getCarroceria());
             stmt.setInt(7, veiculo.getConfiguracao());
             stmt.setString(8, veiculo.getInfo());
@@ -97,6 +99,15 @@ public class VeiculoDAO extends  ConectionDAO{
         }
     }
 
+    private Veiculo getVeiculoByTipo(int tipo){
+        switch(tipo){
+            case Veiculo.CAMINHAO:
+                return new Caminhao();
+            default:
+                return new Carro();
+        }
+    }
+    
     public ArrayList<Veiculo> PesquisarTodos(){
         AbrirConexao();
         String sql = "SELECT * FROM "+TB_VEICULO; //Script sql para Consultar
@@ -104,15 +115,16 @@ public class VeiculoDAO extends  ConectionDAO{
         try {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
+            //statement.closeOnCompletion();
             Veiculo v ;
             while (resultSet.next()){
-                v = new Veiculo();
+                v = getVeiculoByTipo(resultSet.getInt(TIPO));
                 v.setId(resultSet.getInt(ID));
                 v.setPlaca(resultSet.getString(PLACA));
                 v.setMarca(resultSet.getString(MARCA));
                 v.setModelo(resultSet.getString(MODELO));
                 v.setAno(resultSet.getInt(ANO));
-                v.setTipo(resultSet.getString(TIPO));
+                v.setTipo(resultSet.getInt(TIPO));
                 v.setCarroceria(resultSet.getString(CARROCERIA));
                 v.setConfiguracao(resultSet.getInt(CONFIGURACAO));
                 v.setInfo(resultSet.getString(INFO));
@@ -130,19 +142,20 @@ public class VeiculoDAO extends  ConectionDAO{
     public Veiculo PesquisarById(int id){
         AbrirConexao();
         String sql = "SELECT * FROM "+TB_VEICULO+" WHERE "+ID+" = "+id;
-        Veiculo v = new Veiculo();
+        Veiculo v = new Caminhao();
                
         try {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
             
             while(resultSet.next()){
+                v = getVeiculoByTipo(resultSet.getInt(TIPO));
                 v.setId(resultSet.getInt(ID));
                 v.setPlaca(resultSet.getString(PLACA));
                 v.setMarca(resultSet.getString(MARCA));
                 v.setModelo(resultSet.getString(MODELO));
                 v.setAno(resultSet.getInt(ANO));
-                v.setTipo(resultSet.getString(TIPO));
+                v.setTipo(resultSet.getInt(TIPO));
                 v.setCarroceria(resultSet.getString(CARROCERIA));
                 v.setConfiguracao(resultSet.getInt(CONFIGURACAO));
                 v.setInfo(resultSet.getString(INFO));
@@ -167,13 +180,13 @@ public class VeiculoDAO extends  ConectionDAO{
             resultSet = statement.executeQuery(sql);
             Veiculo v ;
             while (resultSet.next()){
-                v = new Veiculo();
+                v = getVeiculoByTipo(resultSet.getInt(TIPO));
                 v.setId(resultSet.getInt(ID));
                 v.setPlaca(resultSet.getString(PLACA));
                 v.setMarca(resultSet.getString(MARCA));
                 v.setModelo(resultSet.getString(MODELO));
                 v.setAno(resultSet.getInt(ANO));
-                v.setTipo(resultSet.getString(TIPO));
+                v.setTipo(resultSet.getInt(TIPO));
                 v.setCarroceria(resultSet.getString(CARROCERIA));
                 v.setConfiguracao(resultSet.getInt(CONFIGURACAO));
                 v.setInfo(resultSet.getString(INFO));
@@ -191,18 +204,19 @@ public class VeiculoDAO extends  ConectionDAO{
     public Veiculo PesquisarByPlaca(String placa){
         AbrirConexao();
         String sql = "SELECT * FROM "+TB_VEICULO+" WHERE "+PLACA+" LIKE '%"+placa+"%'"; //Script sql para Consultar
-        Veiculo v = new Veiculo();
+        Veiculo v = new Caminhao();
         try {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
             
             while(resultSet.next()){
+                v = getVeiculoByTipo(resultSet.getInt(TIPO));
                 v.setId(resultSet.getInt(ID));
                 v.setPlaca(resultSet.getString(PLACA));
                 v.setMarca(resultSet.getString(MARCA));
                 v.setModelo(resultSet.getString(MODELO));
                 v.setAno(resultSet.getInt(ANO));
-                v.setTipo(resultSet.getString(TIPO));
+                v.setTipo(resultSet.getInt(TIPO));
                 v.setCarroceria(resultSet.getString(CARROCERIA));
                 v.setConfiguracao(resultSet.getInt(CONFIGURACAO));
                 v.setInfo(resultSet.getString(INFO));
@@ -222,7 +236,7 @@ public class VeiculoDAO extends  ConectionDAO{
         if(lista.size()>0){
             return lista.get(lista.size()-1);
         }else{
-            return new Veiculo();
+            return new Caminhao();
         }
     }    
 }

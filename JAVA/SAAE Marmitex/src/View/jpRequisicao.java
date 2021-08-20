@@ -147,8 +147,8 @@ public class jpRequisicao extends javax.swing.JPanel {
                         .addComponent(btnNovo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSalvar)
-                        .addGap(18, 18, 18)
-                        .addComponent(txfDataAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txfDataAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -163,7 +163,7 @@ public class jpRequisicao extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txfTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE))))
+                                .addComponent(txfTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 521, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,7 +218,7 @@ public class jpRequisicao extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 906, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -233,9 +233,18 @@ public class jpRequisicao extends javax.swing.JPanel {
     private String getFormatoData(Long TimeMilis){
         Calendar c = new GregorianCalendar();
         c.setTimeInMillis(TimeMilis);
-        String data = c.get(Calendar.DAY_OF_MONTH)+"/";
-        data += c.get(Calendar.MONTH)+1+"/";
-        data += c.get(Calendar.YEAR);
+        int dia = c.get(Calendar.DAY_OF_MONTH);
+        int mes = c.get(Calendar.MONTH)+1;
+        int ano = c.get(Calendar.YEAR);
+        int hora = c.get(Calendar.HOUR_OF_DAY);
+        int minuto = c.get(Calendar.MINUTE);
+        
+        String data = (dia<10) ? "0"+dia+"/" : dia + "/";
+        data += (mes<10)?"0"+mes+"/": mes+"/";
+        data += c.get(Calendar.YEAR)+" ";
+        data += (hora<10)?"0"+hora : hora;
+        data +=":";
+        data += (minuto<10)?"0"+minuto : minuto;
         return data;
     }
     private void cbbRestauranteItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbbRestauranteItemStateChanged

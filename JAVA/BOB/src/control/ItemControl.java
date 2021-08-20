@@ -18,9 +18,12 @@ public class ItemControl {
         aux = new Auxiliar();
     }
     
-    //Método deverá buscar o item pelo ID
+
     public Item getItemByID(int id){
         return itemDao.PesquisarById(id);
+    }
+    public int getIdItemByMarcaModelo(String marca, String modelo){
+        return itemDao.getIdByMarcaModelo(marca, modelo);
     }
     public ArrayList<Item> getArrayListItemByTipo(int[] tipos){
         ArrayList<Item> arraylist = new ArrayList<Item>();
@@ -62,7 +65,6 @@ public class ItemControl {
         }
         
     }
-    //Método buscará todos os itens e retornará a lista
      public ArrayList<Item> getArrayListTodosItem(){
         return itemDao.PesquisarTodos();
     }
@@ -98,12 +100,12 @@ public class ItemControl {
     public boolean salvar(Item item){
         boolean retorno = false;
         try{
-            if(item.getId()==0){
+            Item i = itemDao.PesquisarById(item.getId());
+            if(item.getId()==0 || !item.getModelo().equalsIgnoreCase(i.getModelo())){
+                item.setId(0);
                 itemDao.Inserir(item);
-                
             }else{
                 itemDao.Alterar(item);
-                
             }
             retorno = true;
         }catch(Exception e){

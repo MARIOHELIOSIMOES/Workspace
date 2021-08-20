@@ -16,6 +16,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import model.Auxiliar;
 import model.DefaultTableModelNaoEditavel;
+import model.GraficoItem;
 import model.GraficoItemC;
 import model.Usuario;
 import model.Veiculo;
@@ -45,13 +46,20 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
     private void inicializar(){
         initComponents();
         arraylist = new ArrayList<VeiculoCombustivel>();
-        veiculo = new Veiculo();
+        //veiculo = new Veiculo();
         usuario = new Usuario();
         vcc = new VeiculoCombustivelControl();
         aux = new Auxiliar();
         
     }
     public void atualizarTela(){
+        /*new Thread(new Runnable() {
+            @Override
+            public void run() {
+               
+                
+            }
+        }).start();*/
         lblKmAtual.setText(new VeiculoKMControl().getUltimoKmByIDVeiculo(veiculo.getId())+"");
         preencherTabela();
         calcularMediaGeral();
@@ -136,11 +144,12 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
     private void preencherGrafico(){
         try{
             
-            ArrayList<GraficoItemC> arraygrafico = vcc.getArrayGraficoC(veiculo.getId(), 5);
+            ArrayList<GraficoItem> arraygrafico = vcc.getArrayGraficoLinha(veiculo.getId(), 10);
             jpGrafico.removeAll();
             jpGrafico.setLayout(new GridLayout(1,1));
             //jpGrafico.setLayout(new SpringLayout());
-            jpGrafico.add(new jpGraficoBarra("", arraygrafico));
+            //jpGrafico.add(new jpGraficoBarra("", arraygrafico));
+            jpGrafico.add(new jpGraficoLinha("", arraygrafico));
             
         }catch(Exception e){
             aux.RegistrarLog(e.getMessage(), "jpCustoCombustivel.preencherGrafico");
@@ -202,7 +211,7 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Histórico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Histórico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -225,7 +234,7 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
         );
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -239,6 +248,7 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Km Atual");
 
         lblKmAtual.setBackground(new java.awt.Color(205, 220, 57));
@@ -285,9 +295,10 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Último Abastecimento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Último Abastecimento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("Consumo");
 
         lblConsumoUlt.setBackground(new java.awt.Color(205, 220, 57));
@@ -298,6 +309,7 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         jLabel3.setText("Km/Litro");
 
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel13.setText("Custo Atual por KM");
 
@@ -348,7 +360,7 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Média", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Média", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         lblConsumoGeral.setBackground(new java.awt.Color(205, 220, 57));
         lblConsumoGeral.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
@@ -365,9 +377,11 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
         jLabel11.setText("Reais/Km");
 
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
         jLabel16.setText("Consumo");
 
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel17.setText("Custo KM");
 
@@ -443,7 +457,11 @@ public class jpCustoCombustivel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
-        new jdAbastecimento(this, veiculo, usuario).setVisible(true);
+        if(jfPrincipal.isUserOperaOrAdmin()){
+            new jdAbastecimento(this, veiculo, usuario).setVisible(true);
+        }else{
+            aux.showMessagemSemPermissao();
+        }
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
 

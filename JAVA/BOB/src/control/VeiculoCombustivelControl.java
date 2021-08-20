@@ -6,6 +6,7 @@ import data.VeiculoCombustivelDAO;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Auxiliar;
+import model.GraficoItem;
 import model.GraficoItemC;
 import model.VeiculoCombustivel;
 
@@ -23,10 +24,10 @@ public class VeiculoCombustivelControl {
         vcDAO = new VeiculoCombustivelDAO();
     }
     
-    //Método deverá fazer uma consulta na base de dados e retornar a lista com todos os registros
+    // deverá fazer uma consulta na base de dados e retornar a lista com todos os registros
     public ArrayList<VeiculoCombustivel> getArrayListByIDVeiculo(int idVeiculo){
         //precisa implementar
-        //arraylist = new VeiculoKmMock().getLista(); // Método para Teste com dados Mock
+        //arraylist = new VeiculoKmMock().getLista(); //  para Teste com dados Mock
         try{
             arraylist = vcDAO.PesquisarTodosByIDVeiculo(idVeiculo);
         }catch (Exception e){
@@ -64,13 +65,30 @@ public class VeiculoCombustivelControl {
             return grafC;
         }
     }
+    private GraficoItem getCalcularGraficoCustoKm(VeiculoCombustivel atual, VeiculoCombustivel proximo, String id){
+        GraficoItem graficoItem = new GraficoItem();
+        try{
+            int km = proximo.getKm() - atual.getKm();
+            km = (km<=0)? 1 : km;
+            float litro = atual.getLitros();
+            litro = (litro<=0)? 1 : litro;
+            float kmXlitro =  km / litro;
+            graficoItem.setNome(id);
+            graficoItem.setValor(kmXlitro);
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "VeiculoCombustivelControl.getCalcularGraficoCustoKm");
+        }finally{
+            return graficoItem;
+        }
+    }
+    
+    
     public ArrayList<GraficoItemC> getArrayGraficoC(int idVeiculo, int nRegistros){
         int limite = 0;
         
         ArrayList<GraficoItemC> arrayGrafico = new ArrayList<GraficoItemC>();
         VeiculoCombustivel proximo = new VeiculoCombustivel();
         try{
-            proximo.setKm(new VeiculoKMControl().getUltimoKmByIDVeiculo(idVeiculo));
             arraylist = getArrayListByIDVeiculo(idVeiculo);
             if(arraylist.size()<=0){
                 GraficoItemC grafC = new GraficoItemC();
@@ -86,15 +104,46 @@ public class VeiculoCombustivelControl {
             
             limite = arraylist.size()- nRegistros - 1;
             limite = limite>=0? limite : 0;
-
+            
             VeiculoCombustivel atual;
-            for(int i = arraylist.size()-1; i>=limite; i--){
+            proximo.setKm(arraylist.get(arraylist.size()-1).getKm());
+            
+            for(int i = limite ; i < arraylist.size()-1; i++){ //-1
+                //for(int i = arraylist.size()-2; i>=limite; i--){ //-1
                 atual = arraylist.get(i);
                 arrayGrafico.add(getCalcularGraficoC(atual, proximo, (i+1)+""));
                 proximo = atual;
             }
         }catch(Exception e){
             aux.RegistrarLog(e.getMessage(), "PedidoOleoControl.getArrayGraficoC");
+        }
+        return arrayGrafico;
+    }
+    public ArrayList<GraficoItem> getArrayGraficoLinha(int idVeiculo, int nRegistros){
+        int limite = 0;
+        
+        ArrayList<GraficoItem> arrayGrafico = new ArrayList<GraficoItem>();
+        try{
+            arraylist = getArrayListByIDVeiculo(idVeiculo);
+            if(arraylist.size()<=0){
+                GraficoItem graficoItem = new GraficoItem();
+                graficoItem.setNome("KM/Litro");
+                graficoItem.setValor(0);
+                arrayGrafico.add(graficoItem);
+                return arrayGrafico;
+            }
+            
+            limite = arraylist.size()- nRegistros - 1;
+            limite = limite>=0? limite : 0;
+            
+            VeiculoCombustivel atual, proximo;
+            for(int i = limite ; i < arraylist.size()-1; i++){ //-1
+                atual = arraylist.get(i);
+                proximo = arraylist.get(i+1);
+                arrayGrafico.add(getCalcularGraficoCustoKm(atual, proximo, (i+1)+""));
+             }
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "PedidoOleoControl.getArrayGraficoLinha");
         }
         return arrayGrafico;
     }
@@ -168,35 +217,7 @@ public class VeiculoCombustivelControl {
             return custo;
         }
     }
-    /*public float custoKmGeralByIdVeiculo2(int idVeiculo, int numRegistros){
-            float media = 0, custo =0, mediaGeral =0, custoGeral = 0;
-            arraylist = getArrayListByIDVeiculo(idVeiculo);
-            try{    
-                VeiculoCombustivelControl vcc = new VeiculoCombustivelControl();
-                VeiculoKMControl vkm = new VeiculoKMControl();
-                
-                int kmAtual = vkm.getUltimoKmByIDVeiculo(idVeiculo);
-                int kmAnterior = 0;
-                int limite = arraylist.size() - numRegistros;
-                limite = (limite<0) ? 0 : limite;
-                
-                for(int i=arraylist.size()-1; i>= limite; i--){
-                    kmAnterior = arraylist.get(i).getKm();
-                    media = vcc.mediaConsumo(kmAtual,kmAnterior , arraylist.get(i).getLitros());
-                    kmAtual = kmAnterior;
-                    custo = vcc.CustoKm(arraylist.get(i).getValor(), arraylist.get(i).getLitros(), media);
-                    mediaGeral+=media;
-                    custoGeral+=custo;
-                }
-                custo = custoGeral/numRegistros;
-                media = mediaGeral/numRegistros;
-            
-            }catch(Exception e){
-                throw new ChecarDebugException("VeiculoCombustivelControl.custoKMgeralByIdVeiculo");
-            }finally{
-                return custo;
-            }
-    }*/
+    
     public float custoKmGeralByIdVeiculo(int idVeiculo, int numRegistros){
         float media = 0, custo =0, mediaGeral =0, custoGeral = 0;
         arraylist = getArrayListByIDVeiculo(idVeiculo);
@@ -253,21 +274,20 @@ public class VeiculoCombustivelControl {
             return custo;
         }
     }
-    //Método deverá validar os parâmetros recebidos e salvar na base de dados
     
     private boolean validacaoCampos(String id, int idVeiculo, int idUsuario,String km, String posto, String combustivel, 
-                                                        String litros, String valor, String data){
-        if(km.equals("") || posto.equals("")||combustivel.equals("")|| litros.equals("")||valor.equals("")||data.equals("")){
+                                                        String litros, String valor, String data, String motorista){
+        if(km.equals("") || posto.equals("")||combustivel.equals("")|| litros.equals("")||valor.equals("")||data.equals("")||motorista.equals("")){
             aux.showMessageWarning("Valor inválido. Verifique os campos!", "Validação de valores");
             return false;
         }
         return true;
     }
     public boolean addVeiculoCombustivel(String id, int idVeiculo, int idUsuario,String km, String posto, String combustivel, 
-                                                        String litros, String valor, String data){
+                                                        String litros, String valor, String data, String motorista){
         try{
             VeiculoCombustivel vc = new VeiculoCombustivel();
-            if(!validacaoCampos(id, idVeiculo, idUsuario, km.trim(), posto.trim(), combustivel.trim(), litros.trim(), valor.trim(), data.trim())){
+            if(!validacaoCampos(id, idVeiculo, idUsuario, km.trim(), posto.trim(), combustivel.trim(), litros.trim(), valor.trim(), data.trim(), motorista.trim())){
                 return false;
             }
             vc.setIdVeiculo(idVeiculo);
@@ -281,6 +301,7 @@ public class VeiculoCombustivelControl {
             vc.setLitros(Float.parseFloat(litros));
             vc.setValor(Float.parseFloat(valor));
             vc.setDataMilis(aux.dataStringLong(data));
+            vc.setMotorista(motorista);
             if((vc.getKm()<getUltimoVeiculoCombustivelByIdVeiculo(idVeiculo).getKm()) && id.equals("0")){
                 aux.showMessageInformacao("Já existe registro de abastecimento com KM do veiculo maior que o valor informado!", "Validação de valor");
                 return false;
@@ -301,9 +322,9 @@ public class VeiculoCombustivelControl {
                 vc.setId(Integer.parseInt(id));
             }
             if(vc.getId()==0){
-                new VeiculoCombustivelDAO().Inserir(vc);
+                vcDAO.Inserir(vc);
             }else{
-                new VeiculoCombustivelDAO().Alterar(vc);
+                vcDAO.Alterar(vc);
             }
             return true;
             
@@ -319,5 +340,24 @@ public class VeiculoCombustivelControl {
         }
         
       }
+
+    public boolean excluirById(String txtId) {
+        try{
+            String confirmacao = aux.InputText("Informe o ID do item para confirmar a exclusão: ");
+            if(confirmacao.trim().equalsIgnoreCase(txtId.trim())){
+                int id = Integer.parseInt(txtId);
+                if(id==0){
+                    return false;
+                }
+                return vcDAO.excluirById(id);
+            }else{
+                return false;
+            }
+            
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "VeiculoCombustivelControl.excluirById");
+            return false;
+        }
+    }
     
 }

@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.Color;
+import javax.swing.UIManager;
 import model.Auxiliar;
 import model.LinhaItem;
 
@@ -26,6 +27,7 @@ public class jpLinha extends javax.swing.JPanel {
         lblData.setText(aux.getDataString(aux.adicionarDias(aux.getDataMilisAtual(), dias)));
         if(diffkm<=0){
             barKm.setForeground(Color.red);
+            //barKm.setOpaque(true);
             msg = " (Vencido)";
             lblData.setText(aux.getDataStringAtual());
         }
@@ -42,6 +44,11 @@ public class jpLinha extends javax.swing.JPanel {
     }
 
     private void inicializar(){
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch (Exception ex) {
+            //aux.RegistrarLog(DESGATE, FOGO);
+        }
         initComponents();
         aux = new Auxiliar();
     }
@@ -60,7 +67,7 @@ public class jpLinha extends javax.swing.JPanel {
         lblData = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new java.awt.GridLayout());
+        setLayout(new java.awt.GridLayout(1, 0));
 
         lblItem.setText("FILTRO DE COMBUSTÍVEL");
         add(lblItem);
@@ -73,6 +80,7 @@ public class jpLinha extends javax.swing.JPanel {
         barKm.setBackground(new java.awt.Color(255, 255, 255));
         barKm.setForeground(new java.awt.Color(0, 153, 0));
         barKm.setValue(50);
+        barKm.setOpaque(true);
         barKm.setStringPainted(true);
         add(barKm);
 

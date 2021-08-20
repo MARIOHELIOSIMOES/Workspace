@@ -40,7 +40,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
     }
     private void inicializar(){
         initComponents();
-        veiculo = new Veiculo();
+        //veiculo = new Veiculo();
         usuario = new Usuario();
         aux = new Auxiliar();
         mctrol = new ManutencaoControl();
@@ -49,9 +49,16 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         
     }
     public void atualizarTela(){
+        /*new Thread(new Runnable() {
+            @Override
+            public void run() {
+                
+            }
+        }).start();*/
         preencherTabela();
-        preencherUltimo();
-        preencherIntervaloDatas();
+                preencherUltimo();
+                preencherIntervaloDatas();
+        
     }
     private void preencherTabela(){
         try{
@@ -95,7 +102,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
             int diffkm = kmAtual - arraylist.get(i).getKm();
             diffkm = diffkm<=0? 1: diffkm;
             float valor = arraylist.get(i).getValor();
-          //  lblCustoKmParcial.setText(aux.divisaoValores(diffkm, valor));
+          //  lblCustoKmParcial.setText(aux.CustoKMString(diffkm, valor));
             lblCustoKmParcial.setText(aux.StringFloatReais(mctrol.custoKmParcial(veiculo.getId())));
             lblKmAtual.setText(kmAtual+"");
             lblValor.setText(aux.StringFloatReais(valor));
@@ -131,7 +138,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
             for(Manutencao m: arrayIntervalo){
                 valorTotal += m.getValor()<0? 0 : m.getValor(); // Soma dos valores das manutenções
             }
-            String custo = aux.divisaoValores(diffKm, valorTotal);
+            String custo = aux.CustoKMString(diffKm, valorTotal);
             
             lblKmInicio.setText(mI.getKm()+"");
             lblKmFim.setText(mF.getKm()+"");
@@ -226,7 +233,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Histórico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Histórico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -266,7 +273,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addComponent(btnAdicionar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -279,9 +286,10 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         jLabel1.setOpaque(true);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Última Manutenção", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Última Manutenção", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("Data");
 
         lblData.setBackground(new java.awt.Color(205, 220, 57));
@@ -289,6 +297,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         lblData.setText("30/12/2020");
 
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setText("Km Atual");
 
         lblKmAtual.setBackground(new java.awt.Color(205, 220, 57));
@@ -296,6 +305,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         lblKmAtual.setText("150.000");
 
         jLabel18.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setText("Oficina");
 
         lblOficina.setBackground(new java.awt.Color(205, 220, 57));
@@ -303,6 +313,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         lblOficina.setText("Nome ");
 
         jLabel21.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("Serviço");
 
         lblServico.setBackground(new java.awt.Color(205, 220, 57));
@@ -315,6 +326,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         lblCustoKmParcial.setText("R$ 4,21");
 
         jLabel22.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 51, 51));
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel22.setText("Custo Atual por KM");
 
@@ -324,6 +336,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         jLabel23.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(51, 51, 51));
         jLabel23.setText("Km da Manutenção");
 
         lblKm.setBackground(new java.awt.Color(205, 220, 57));
@@ -331,6 +344,7 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         lblKm.setText("150.000");
 
         jLabel24.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(51, 51, 51));
         jLabel24.setText("Valor");
 
         lblValor.setBackground(new java.awt.Color(205, 220, 57));
@@ -434,9 +448,11 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         jLabel11.setText("Reais/Km");
 
         jLabel16.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
         jLabel16.setText("Período");
 
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel17.setText("Custo por KM");
 
@@ -467,10 +483,12 @@ public class jpCustoManutencao extends javax.swing.JPanel {
         });
 
         jLabel19.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 51, 51));
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel19.setText("Valor do Intervalo");
 
         jLabel20.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
         jLabel20.setText("KM do Intervalo");
 
         lblValorFim.setBackground(new java.awt.Color(205, 220, 57));
@@ -601,10 +619,17 @@ public class jpCustoManutencao extends javax.swing.JPanel {
 
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
        // new jdAbastecimento(this, veiculo, usuario).setVisible(true);
-       jfCadastroManutencao jfm = new  jfCadastroManutencao(this, veiculo, usuario);
-       jfm.setSize(800, 500);
-      // jfm.setExtendedState(JFrame.MAXIMIZED_BOTH);
-       jfm.setVisible(true);
+       if(jfPrincipal.isUserOperaOrAdmin()){
+                jfCadastroManutencao jfm = new  jfCadastroManutencao(this, veiculo, usuario);
+            jfm.setSize(800, 500);
+           // jfm.setExtendedState(JFrame.MAXIMIZED_BOTH);
+              jfm.setVisible(true);
+        }else{
+            aux.showMessagemSemPermissao();
+        }
+       
+       
+       
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
     private void jtxfDataInicioFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxfDataInicioFocusLost

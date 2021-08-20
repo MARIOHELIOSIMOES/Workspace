@@ -88,6 +88,42 @@ public class PedidoOleoControl extends PedidoControl{
         }
         return arrayGrafico;
     }
+    public ArrayList<GraficoItem> getArrayGraficoLinha(int idVeiculo, int nRegistros){
+        int limite = 0;
+        //Pedido pedidoProximo = new Pedido();// Usado para calcular o pedido em aberto, set apenas o km 
+        ArrayList<GraficoItem> arrayGrafico = new ArrayList<GraficoItem>();
+       
+        try{
+            //pedidoProximo.setKm(new VeiculoKMControl().getUltimoKmByIDVeiculo(idVeiculo));
+            
+            arraylist = getArrayListPedidoByIdVeiculoByTipo(idVeiculo, Pedido.OLEOFILTRO);
+            if(arraylist.size()<=0){
+                GraficoItem graficoItem = new GraficoItem();
+                graficoItem.setNome("Custo Km");
+                graficoItem.setValor(0);
+               
+                arrayGrafico.add(graficoItem);
+                return arrayGrafico;
+            }
+            
+            limite = arraylist.size()- nRegistros - 1;
+            limite = limite>=0? limite : 0;
+            
+           // pedidoProximo = arraylist.get(arraylist.size()-1);
+            Pedido pedidoAtual, pedidoProximo;
+           // for(int i = arraylist.size()-2; i>=limite; i--){
+            for(int i = limite;  i < arraylist.size()-1; i++){
+                pedidoAtual = arraylist.get(i);
+                pedidoProximo = arraylist.get(i+1);
+                arrayGrafico.add(getCalcularGraficoItem(pedidoAtual, pedidoProximo, (i+1)+""));
+            }
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "PedidoOleoControl.getArrayGraficoC");
+        }
+        return arrayGrafico;
+    }
+    
+    
     
     public float getMediaCustoGeral(int idVeiculo, int nRegistros){
         

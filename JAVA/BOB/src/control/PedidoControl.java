@@ -4,6 +4,7 @@ import Exception.ValorInvalidoException;
 import data.PedidoDAO;
 import java.util.ArrayList;
 import model.Auxiliar;
+import model.GraficoItem;
 import model.GraficoItemC;
 import model.Pedido;
 import model.PedidoItem;
@@ -144,6 +145,23 @@ public class PedidoControl {
             return grafC;
         }
     }
+    protected GraficoItem getCalcularGraficoItem(Pedido atualPedido, Pedido proxPedido, String id){
+        GraficoItem graficoItem = new GraficoItem();
+        try{
+            float custo = pic.getValorTotalByIdPedido(atualPedido.getId());//Custo pedido Atual
+            int diffKm = proxPedido.getKm() - atualPedido.getKm();// diferença dos KM atual e o próximo
+            diffKm = (diffKm<=0)? 1 : diffKm;
+            float custoKM = custo / diffKm;
+            graficoItem.setNome(id);
+            graficoItem.setValor(custoKM);
+            
+        }catch (Exception e){
+            aux.RegistrarLog(e.getMessage(), "PedidoControl.getCalcularGraficoItem");
+        }finally{
+            return graficoItem;
+        }
+    }
+    
     public boolean Excluir(Pedido pedido){
         try{
             return pDao.Excluir(pedido);

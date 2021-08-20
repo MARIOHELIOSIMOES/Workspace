@@ -3,6 +3,7 @@ package view;
 import control.ItemControl;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import model.Auxiliar;
 import model.Item;
 
 /**
@@ -14,12 +15,14 @@ public class jpCadastroOleo extends javax.swing.JPanel {
     private int tipo = 0;
     private int[] tipos;
     ArrayList<Item> arraylist;
+    Auxiliar aux;
     public jpCadastroOleo() {
         inicializar();
     }
 
     private void inicializar(){
         initComponents();
+        aux = new Auxiliar();
         preencherCbbTipo();
         limparCampos();
     }
@@ -296,6 +299,11 @@ public class jpCadastroOleo extends javax.swing.JPanel {
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+
+        if(!jfPrincipal.isUserOperaOrAdmin()){
+            aux.showMessagemSemPermissao();
+            return;
+        }
         String id, marca, modelo, valor,info;
         
         id = txfId.getText();

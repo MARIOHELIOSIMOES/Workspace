@@ -49,12 +49,12 @@
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnNovo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="3" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblKmAtual" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="btnNovo" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="jpHistorico" max="32767" attributes="0"/>
@@ -90,8 +90,8 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Informa&#xe7;&#xf5;es dos itens">
-              <Font PropertyName="font" name="Comic Sans MS" size="12" style="1"/>
-              <Color PropertyName="color" blue="75" green="75" red="75" type="rgb"/>
+              <Font PropertyName="font" name="Verdana" size="10" style="1"/>
+              <Color PropertyName="color" blue="7f" green="7f" red="7f" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -141,7 +141,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="66" max="32767" attributes="0"/>
+                  <EmptySpace pref="70" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <Component id="jSeparator1" max="32767" attributes="0"/>
@@ -156,6 +156,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/dinheirop.png"/>
@@ -217,8 +220,8 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Hist&#xf3;rico">
-              <Font PropertyName="font" name="Comic Sans MS" size="12" style="1"/>
-              <Color PropertyName="color" blue="75" green="75" red="75" type="rgb"/>
+              <Font PropertyName="font" name="Verdana" size="10" style="1"/>
+              <Color PropertyName="color" blue="7f" green="7f" red="7f" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -234,7 +237,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane3" pref="174" max="32767" attributes="0"/>
+                  <Component id="jScrollPane3" pref="178" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -274,7 +277,7 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="M&#xe9;dia">
-              <Font PropertyName="font" name="Comic Sans MS" size="12" style="1"/>
+              <Font PropertyName="font" name="Verdana" size="10" style="1"/>
               <Color PropertyName="color" blue="7f" green="7f" red="7f" type="rgb"/>
             </TitledBorder>
           </Border>
@@ -327,6 +330,9 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Verdana" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/icons/dinheirop.png"/>
@@ -400,6 +406,9 @@
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Verdana" size="18" style="1"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="33" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Km Atual"/>
       </Properties>

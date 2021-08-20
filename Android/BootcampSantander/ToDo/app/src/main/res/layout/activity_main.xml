@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/label_tarefas"
         android:id="@+id/tv_title"
         android:layout_margin="20dp"
         android:textColor="@color/black"

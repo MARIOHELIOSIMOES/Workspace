@@ -12,16 +12,17 @@ public class VeiculoKMControl {
     ArrayList<VeiculoKM> arraylist;
     VeiculoKMDAO vkmDAO;
     Auxiliar aux;
+    PneuControl pc;
+    AvisoControl ac;
+    
     public VeiculoKMControl(){
         arraylist = new ArrayList<VeiculoKM>();
         vkmDAO = new VeiculoKMDAO();
         aux = new Auxiliar();
     }
     
-    //Método deverá fazer uma consulta na base de dados e retornar a lista com todos os registros
+    // deverá fazer uma consulta na base de dados e retornar a lista com todos os registros
     public ArrayList<VeiculoKM> getArrayListVeiculoKM(int idVeiculo){
-        //precisa implementar
-        //arraylist = new VeiculoKmMock().getLista(); // Método para Teste com dados Mock
         try{
             arraylist = vkmDAO.PesquisarTodosByIDVeiculo(idVeiculo);
         }catch (Exception e){
@@ -55,7 +56,20 @@ public class VeiculoKMControl {
         return kmDia;
     }
     
-    //Método deverá validar os parâmetros recebidos e salvar na base de dados
+    // deverá validar os parâmetros recebidos e salvar na base de dados
+    
+    private void atualizarGeral(int idveiculo){
+        try{
+            pc = new PneuControl();
+            pc.atualizarKMsByIdVeiculo(idveiculo);
+            ac = new AvisoControl();
+            ac.atualizarAvisosByIdVeiculo(idveiculo, getUltimoKmByIDVeiculo(idveiculo));
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "VeiculoKMControl.atualziarGeral");
+        }
+         
+    }
+    
     public boolean addVeiculoKM(int idVeiculo, int idUsuario, String data, String KM){
         try{
             VeiculoKM vkmUlt, vkm;
@@ -71,7 +85,13 @@ public class VeiculoKMControl {
                 return false;
             }
             if(JOptionPane.showConfirmDialog(null, "Confirma o valor da nova Quilometragem: \nNovo KM: "+vkm.getValor(), "Confirmação de valor", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION){
-                            return vkmDAO.Inserir(vkm);
+                boolean retorno = vkmDAO.Inserir(vkm);
+               
+                if(retorno){
+                    atualizarGeral(idVeiculo);
+                   
+                }
+                return retorno;
             }
         }catch (NumberFormatException nfe){
            aux.showMessageWarning("Verifique o valor informado!", "Valor inválido");
@@ -89,10 +109,10 @@ public class VeiculoKMControl {
         return vkmDAO.getUltimoVeiculoKMByIDVeiculo(idVeiculo);
     }
     //Precisa implementar
-    public VeiculoKM getVeiculoKMById(int id){
+   /* public VeiculoKM getVeiculoKMById(int id){
         return new VeiculoKM();
-    }
-    //Método retorna o último KM registrado do Veículo
+    }*/
+    // retorna o último KM registrado do Veículo
     public int getUltimoKmByIDVeiculo(int idVeiculo){
         //precisa implementar
         return vkmDAO.getUltimoKMByIDVeiculo(idVeiculo);
@@ -100,6 +120,28 @@ public class VeiculoKMControl {
     public int getDiffUltimoKmByID(int idVeiculo, int km){
         int diff = getUltimoKmByIDVeiculo(idVeiculo)-km;
         return (diff==0?1:diff);
+    }
+
+    public int getKmUltPercorridoByIdVeiculo(int idveiculo) {
+        int kmPercorrido = 0;
+        try{
+            arraylist = getArrayListVeiculoKM(idveiculo);
+            if(arraylist.size()>1){
+                kmPercorrido = (arraylist.get(arraylist.size() - 1).getValor() ) -(arraylist.get(arraylist.size() - 2).getValor()) ;
+            }
+        }catch(Exception e){
+            kmPercorrido = 0;
+        }
+        return kmPercorrido;
+    }
+
+    public void excluirById(VeiculoKM veiculoKM) {
+        try{
+            vkmDAO.Excluir(veiculoKM);
+        }catch(Exception e){
+            aux.RegistrarLog(e.getMessage(), "VeiculoKMControl.excluirById");
+        }
+        
     }
     
     

@@ -31,15 +31,21 @@ public class jpCustoAtual extends javax.swing.JPanel {
         atualizarCustos();
     }
     public void atualizarCustos(){
-        
-        limparCampos();
-        lblCombustivel.setText(aux.StringFloatReais(custoCombustivel()));
-        lblFiltro.setText(aux.StringFloatReais(custoFiltro()));
-        lblFreio.setText(aux.StringFloatReais(custoFreio()));
-        lblGeral.setText(aux.StringFloatReais(custoGeral()));
-        lblManutencao.setText(aux.StringFloatReais(custoManutencao()));
-        lblOleo.setText(aux.StringFloatReais(custoOleo()));
-        lblPneu.setText(aux.StringFloatReais(custoPneu()));
+        /*new Thread(new Runnable() {
+            @Override
+            public void run() {
+               
+                
+            }
+        }).start();*/
+         limparCampos();
+         lblCombustivel.setText(aux.StringFloatReais(custoCombustivel()));
+         lblFiltro.setText(aux.StringFloatReais(custoFiltro()));
+         lblFreio.setText(aux.StringFloatReais(custoFreio()));
+         lblGeral.setText(aux.StringFloatReais(custoGeral()));
+         lblManutencao.setText(aux.StringFloatReais(custoManutencao()));
+         lblOleo.setText(aux.StringFloatReais(custoOleo()));
+         lblPneu.setText(aux.StringFloatReais(custoPneu()));
         preencherGrafico();
 
     }
@@ -181,9 +187,11 @@ public class jpCustoAtual extends javax.swing.JPanel {
         jLabel3.setText("Reais/Km");
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Custo Atual");
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/abastecimentop.png"))); // NOI18N
         jLabel5.setText("Combustível");
 
@@ -196,6 +204,7 @@ public class jpCustoAtual extends javax.swing.JPanel {
         jLabel8.setText("Reais/Km");
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/pneup.png"))); // NOI18N
         jLabel9.setText("Pneu");
 
@@ -206,6 +215,7 @@ public class jpCustoAtual extends javax.swing.JPanel {
         jLabel11.setText("Reais/Km");
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/freiop.png"))); // NOI18N
         jLabel12.setText("Freio");
 
@@ -216,6 +226,7 @@ public class jpCustoAtual extends javax.swing.JPanel {
         jLabel14.setText("Reais/Km");
 
         jLabel15.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/oleop.png"))); // NOI18N
         jLabel15.setText("Óleo");
 
@@ -226,6 +237,7 @@ public class jpCustoAtual extends javax.swing.JPanel {
         jLabel17.setText("Reais/Km");
 
         jLabel18.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/filtrop.png"))); // NOI18N
         jLabel18.setText("Filtro");
 
@@ -236,6 +248,7 @@ public class jpCustoAtual extends javax.swing.JPanel {
         jLabel20.setText("Reais/Km");
 
         jLabel21.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/manutencaop.png"))); // NOI18N
         jLabel21.setText("Manutenção");
 

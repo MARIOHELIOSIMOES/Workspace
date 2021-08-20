@@ -1,19 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import control.ItemControl;
 import control.PedidoControl;
 import control.VeiculoKMControl;
 import control.VeiculoPreventivaControl;
-import java.awt.Dialog;
 import java.util.ArrayList;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Auxiliar;
 import model.DefaultTableModelNaoEditavel;
@@ -62,7 +55,7 @@ public class jfTrocaOleo extends javax.swing.JFrame {
         ic = new ItemControl();
         vkc = new VeiculoKMControl();
         this.usuario = new Usuario();
-        this.veiculo = new Veiculo();
+        //this.veiculo = new Veiculo();
         arraylistPedidoItem = new ArrayList<PedidoItem>();
         arrayListVeiculoPreventiva = new ArrayList<VeiculoPreventiva>();
         arraylistKMProximo = new ArrayList<Integer>();
@@ -86,12 +79,12 @@ public class jfTrocaOleo extends javax.swing.JFrame {
     private void atualizarInfoVeiculo(Veiculo v){
         lblAno.setText(v.getAno()+"");
         lblCarroceria.setText(v.getCarroceria());
-        lblConfiguracao.setText(Veiculo.confLabels[v.getConfiguracao()]);
+        lblConfiguracao.setText(v.getConfiguracaoLabel());
         lblInfo.setText(v.getInfo());
         lblMarca.setText(v.getMarca());
         lblModelo.setText(v.getModelo());
         lblPlaca.setText(v.getPlaca());
-        lblTipo.setText(v.getTipo());
+        lblTipo.setText(Veiculo.TIPOS_STRING[v.getTipo()]);
         kmAtual = vkc.getUltimoKmByIDVeiculo(v.getId());
         lblKM.setText(kmAtual+"");
         txfKm.setText(kmAtual+"");
@@ -200,33 +193,38 @@ public class jfTrocaOleo extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Veículo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 10))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações do Veículo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Placa");
 
         lblPlaca.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblPlaca.setText("DLH8657");
 
-        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("Tipo");
 
         lblTipo.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblTipo.setText("Carro");
 
-        jLabel10.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Marca");
 
         lblMarca.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblMarca.setText("Volkswagem");
 
-        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Modelo");
 
         lblModelo.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblModelo.setText("GOL G4");
 
-        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("Ano");
 
         lblAno.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
@@ -235,22 +233,26 @@ public class jfTrocaOleo extends javax.swing.JFrame {
         lblInfo.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblInfo.setText("Cor vermelho");
 
-        jLabel15.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
         jLabel15.setText("Informação");
 
         lblConfiguracao.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblConfiguracao.setText("4x2");
 
-        jLabel14.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setText("Configuração");
 
         lblCarroceria.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         lblCarroceria.setText("Não se aplica");
 
-        jLabel13.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setText("Carroceria");
 
-        jLabel24.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(51, 51, 51));
         jLabel24.setText("KM Atual");
 
         lblKM.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
@@ -331,7 +333,7 @@ public class jfTrocaOleo extends javax.swing.JFrame {
         );
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Itens", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 10))); // NOI18N
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Itens", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jLabel16.setText("Tipo");
 
@@ -351,13 +353,15 @@ public class jfTrocaOleo extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setText("Nome / Marca");
 
         txfMarca.setEditable(false);
         txfMarca.setText("TechFil");
 
-        jLabel19.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 51, 51));
         jLabel19.setText("Quantidade");
 
         txfQtde.setText("1");
@@ -367,13 +371,15 @@ public class jfTrocaOleo extends javax.swing.JFrame {
             }
         });
 
-        jLabel20.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
         jLabel20.setText("Descrição / Modelo");
 
         txfModelo.setEditable(false);
         txfModelo.setText("xyz");
 
-        jLabel21.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("Informação");
 
         txaInfo.setEditable(false);
@@ -401,7 +407,8 @@ public class jfTrocaOleo extends javax.swing.JFrame {
             }
         });
 
-        jLabel22.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 51, 51));
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel22.setText("Valor (unidade)");
 
@@ -424,7 +431,8 @@ public class jfTrocaOleo extends javax.swing.JFrame {
             }
         });
 
-        jLabel25.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(51, 51, 51));
         jLabel25.setText("KM na Troca");
 
         txfKm.setText("1");
@@ -465,8 +473,8 @@ public class jfTrocaOleo extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txfKm, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(txfKm, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(btnAdicionar)
                 .addContainerGap())
             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -525,7 +533,7 @@ public class jfTrocaOleo extends javax.swing.JFrame {
         );
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Itens Trocados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 10))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Itens Trocados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -566,7 +574,8 @@ public class jfTrocaOleo extends javax.swing.JFrame {
         lblPedidoTotal.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         lblPedidoTotal.setText("R$ 15.000,00");
 
-        jLabel26.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(51, 51, 51));
         jLabel26.setText("Informação do Pedido");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -595,7 +604,7 @@ public class jfTrocaOleo extends javax.swing.JFrame {
                     .addComponent(jLabel26)
                     .addComponent(txfInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE))
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

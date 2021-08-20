@@ -22,9 +22,8 @@ public class DocumentoControl {
         id_veiculo = idVeiculo;
     }
     
-    //método para excluir um documento
-    public boolean excluirDocumento(Documento documento){
-        if(docDao.Excluir(documento)){
+    public boolean excluirDocumento(Documento _documento){
+        if(docDao.Excluir(_documento)){
             return true;
         }else{
             return false;
@@ -38,7 +37,7 @@ public class DocumentoControl {
     public void add(Documento documento){
         
     }
-    //Método para validar e atualizar o registro na base de dados
+    //para validar e atualizar o registro na base de dados
     public int add(String id, String nRegistro, String Validade, String Info){
         int idDocumento=0;
         Documento documento = new Documento();

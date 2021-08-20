@@ -3,6 +3,19 @@ package model;
 
 public class Usuario {
 
+    public static int ID_USUARIO_VAZIO = 0;
+    public static int ADMIN = 0;
+    public static int OPERA = 1;
+    public static int VISUA = 2;
+
+    public static String[] TIPOS = {"Administrador", "Operação", "Visualização"};
+    
+    public Usuario(){
+        setId(ID_USUARIO_VAZIO);
+        setTipo(VISUA);
+        setNome("User");
+    }
+    
     public int getId() {
         return id;
     }
@@ -19,14 +32,18 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public int getIdTipoUsuario() {
-        return idTipoUsuario;
+    public int getTipo() {
+        return tipo;
     }
 
-    public void setIdTipoUsuario(int idTipoUsuario) {
-        this.idTipoUsuario = idTipoUsuario;
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
+    public String getTipoDescricao(){
+        return TIPOS[getTipo()];
+    }
+    
     private int id;
     private String nome;
-    private int idTipoUsuario;
+    private int tipo;
 }

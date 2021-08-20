@@ -12,10 +12,20 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import javax.swing.JOptionPane;
+import view.jfPrincipal;
 
 
 //Classe Auxiliar para trabalhar com formatação de Datas, Recebendo um valor de time em milisegundos
 public class Auxiliar {
+    private static final String  SEM_PERMISSAO = "Usuário sem nível de permissão necessário";
+    private static final String CONTROLE_ACESSO = "Controle de Acesso do Sistema";
+    private static final String VALORES_INVALIDOS = "Verifique os campos, existe(m) valor(es) inválido(s)!";
+    private static final String VALIDACAO = "Validação de informações";
+    private static final String SUCESSO = "Salvo com sucesso";
+    private static final String FALHA = "Falha ao salvar";
+    private static final String INFORMEDATA = "Informe uma data válida! (ex: 30/01/2021)";
+    private static final String ID_EXCLUSAO = "Informe o valor do ID para confirmar a exclusão:";
+   
     
     Calendar c;
     
@@ -71,6 +81,9 @@ public class Auxiliar {
     public void showMessageWarning(String msg, String titulo){
         JOptionPane.showMessageDialog(null,msg,titulo, JOptionPane.WARNING_MESSAGE);
         System.out.println("Titulo: "+ titulo +"\nMensagem: "+msg);
+    }
+    public void showMessageValoresInvalidos(){
+        showMessageWarning(VALORES_INVALIDOS, VALIDACAO);
     }
     public String diffDataString(Long atual, Long antiga){
         Auxiliar a1, a2;
@@ -157,19 +170,37 @@ public class Auxiliar {
         }
         return retorno;
     }
-    public String divisaoValores(int km, float custo){
+    public String CustoKMString(int km, float custo){
         float valor=0;
         try{
+            km = (km<=0) ? 1: km;
             valor = custo/km;
+            
         }catch(Exception e){
             valor = 0;
         }
-        return StringFloatReais(valor);
+        return StringFloatReais(valor) + " / Km";
+    }
+    public float CustoKmFloat(int km, float custo){
+         float valor=0;
+        try{
+            km = (km<=0) ? 1: km;
+            valor = custo/km;
+            
+        }catch(Exception e){
+            valor = 0;
+        }
+        return valor;
     }
     public int diferencaKM(int kmMenor, int kmMaior){
         int kmdiff = kmMaior - kmMenor;
         kmdiff = (kmdiff<=0)? 1 : kmdiff;
         return kmdiff;
+    }
+    public boolean ConfirmarValor(String titulo, String mensagem){
+        int retorno;
+        retorno = JOptionPane.showConfirmDialog(null, mensagem, titulo, JOptionPane.YES_NO_OPTION);
+        return (retorno==JOptionPane.YES_OPTION? true: false);
     }
     
     public String InputText(String mensagem){
@@ -182,6 +213,9 @@ public class Auxiliar {
         }finally{
             return retorno;
         }
+    }
+    public void showMessageConfirmacao(boolean status, String titulo){
+        showMessageInformacao(status? SUCESSO: FALHA, titulo);
     }
     
     public long dataStringLong(String dataString)throws Exception{
@@ -223,6 +257,33 @@ public class Auxiliar {
     public float StringToFloat(String valor)throws Exception{
         valor = valor.replaceAll(",", ".");
         return Float.parseFloat(valor);
+    }
+
+    public void showMessagemSemPermissao() {
+        showMessageInformacao( SEM_PERMISSAO+" \nNivel: " +Usuario.TIPOS[jfPrincipal.getNivelUsuario()], CONTROLE_ACESSO );
+    }
+
+    public void showMessageDataInvalida() {
+        showMessageWarning(INFORMEDATA, VALIDACAO);
+    }
+
+    public boolean validarData(String text) {
+        try{
+            String dia = text.substring(0, 2);
+            String mes = text.substring(3, 5);
+            String ano = text.substring(6);
+
+            Calendar cl = new GregorianCalendar();
+            cl.setLenient(false);
+            cl.set(Integer.parseInt(ano), Integer.parseInt(mes)-1, Integer.parseInt(dia));
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+    }
+
+    public String InputTextIDExclusao() {
+        return InputText(ID_EXCLUSAO);
     }
     
 

@@ -1,32 +1,20 @@
 package view;
 
-import control.ItemControl;
-import control.PedidoControl;
 import control.PedidoItemControl;
 import control.PedidoOleoControl;
 import control.VeiculoKMControl;
 import control.VeiculoPreventivaControl;
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import javax.swing.DefaultListModel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Auxiliar;
 import model.DefaultTableModelNaoEditavel;
+import model.GraficoItem;
 import model.Item;
 import model.Pedido;
-import model.PedidoItem;
-import model.ProgressBarItem;
 import model.Usuario;
 import model.Veiculo;
-import model.VeiculoOleoCheck;
 import model.VeiculoPreventiva;
-import model.GraficoItem;
 import model.GraficoItemC;
 import model.LinhaItem;
 
@@ -59,6 +47,12 @@ public class jpCustoOleo extends javax.swing.JPanel {
     }
     public void atualizarTela(){
         try{
+            /*new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    
+                }
+            }).start();*/
             kmAtual = vkm.getUltimoKmByIDVeiculo(veiculo.getId());
             lblKmAtual.setText(kmAtual+"");
             preencherUltimoPedido();
@@ -72,7 +66,7 @@ public class jpCustoOleo extends javax.swing.JPanel {
     }
     private void inicializar(){
         initComponents();
-        veiculo = new Veiculo();
+        //veiculo = new Veiculo();
         usuario = new Usuario();
         arraylistPedidos = new ArrayList<Pedido>();
         pic = new PedidoItemControl();
@@ -138,10 +132,10 @@ public class jpCustoOleo extends javax.swing.JPanel {
              
             lblCustoKmGeral.setText(aux.StringFloatReais(poc.getMediaCustoGeral(veiculo.getId(), 5)));
             lblCustoAtual.setText(aux.StringFloatReais(poc.getMediaCustoAtual(veiculo.getId())));
-            ArrayList<GraficoItemC> arraygrafico = poc.getArrayGraficoC(veiculo.getId(), 5);
+            ArrayList<GraficoItem> arraygrafico = poc.getArrayGraficoLinha(veiculo.getId(), 10);
             jpGrafico.removeAll();
             jpGrafico.setLayout(new GridLayout(1,1));
-            jpGrafico.add(new jpGraficoBarra("", arraygrafico));
+            jpGrafico.add(new jpGraficoLinha("", arraygrafico));
             
         }catch(Exception e){
             aux.RegistrarLog(e.getMessage(), "jpCustoOleo.CalcularMediaGeral");
@@ -205,10 +199,11 @@ public class jpCustoOleo extends javax.swing.JPanel {
         jLabel1.setOpaque(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações dos itens", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações dos itens", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(580, 164));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel6.setText("Custo Último Pedido");
 
@@ -261,7 +256,7 @@ public class jpCustoOleo extends javax.swing.JPanel {
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jSeparator1)
                 .addContainerGap())
@@ -269,7 +264,7 @@ public class jpCustoOleo extends javax.swing.JPanel {
         );
 
         jpHistorico.setBackground(new java.awt.Color(255, 255, 255));
-        jpHistorico.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Histórico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(117, 117, 117))); // NOI18N
+        jpHistorico.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Histórico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -299,13 +294,14 @@ public class jpCustoOleo extends javax.swing.JPanel {
             jpHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpHistoricoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Média", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12), new java.awt.Color(127, 127, 127))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Média", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jLabel17.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel17.setText("Custo KM");
 
@@ -368,6 +364,7 @@ public class jpCustoOleo extends javax.swing.JPanel {
         });
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Km Atual");
 
         lblKmAtual.setBackground(new java.awt.Color(205, 220, 57));
@@ -403,18 +400,24 @@ public class jpCustoOleo extends javax.swing.JPanel {
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
-                        .addComponent(lblKmAtual)))
+                        .addComponent(lblKmAtual))
+                    .addComponent(btnNovo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpHistorico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
-        new jfTrocaOleo(this, usuario, veiculo).setVisible(true);
+        if(jfPrincipal.isUserOperaOrAdmin()){
+                new jfTrocaOleo(this, usuario, veiculo).setVisible(true);
+        }else{
+            aux.showMessagemSemPermissao();
+        }
+        
+        
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void jTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMouseClicked

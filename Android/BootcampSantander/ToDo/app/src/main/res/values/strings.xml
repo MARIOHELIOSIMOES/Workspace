@@ -7,4 +7,7 @@
     <string name="lbl_cancel">Cancelar</string>
     <string name="lbl_create">Criar</string>
     <string name="task">Tarefa</string>
+    <string name="label_editar">Editar</string>
+    <string name="label_deletar">Deletar</string>
+    <string name="label_tarefas">Tarefas</string>
 </resources>

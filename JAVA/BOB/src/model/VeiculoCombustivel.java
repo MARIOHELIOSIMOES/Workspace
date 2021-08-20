@@ -75,6 +75,7 @@ public class VeiculoCombustivel {
     private int idUsuario;
     private float litros;
     private String posto;
+    private String motorista;
 
     public int getIdVeiculo() {
         return idVeiculo;
@@ -82,5 +83,13 @@ public class VeiculoCombustivel {
 
     public void setIdVeiculo(int idVeiculo) {
         this.idVeiculo = idVeiculo;
+    }
+
+    public String getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(String motorista) {
+        this.motorista = motorista;
     }
 }

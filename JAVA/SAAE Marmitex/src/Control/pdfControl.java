@@ -108,7 +108,8 @@ public class pdfControl {
             }
             
             documento.add(new Paragraph("Portaria: "+usuario.getNome()+"\n"));
-            documento.add(new Paragraph("Data: "+pedido.getDataString()+"\n\n"));
+            //documento.add(new Paragraph("Data: "+pedido.getDataString()+"\n\n"));
+            documento.add(new Paragraph("Data: "+pedido.getDataHoraString()+"\n\n"));
             
             titulo = new Paragraph("Emitente: ____________________________________________________");
             titulo.setAlignment(Paragraph.ALIGN_CENTER);

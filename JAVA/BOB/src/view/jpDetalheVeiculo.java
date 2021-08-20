@@ -5,10 +5,12 @@
  */
 package view;
 
+import control.AvisoControl;
 import control.UsuarioControl;
 import control.VeiculoControl;
 import java.awt.CardLayout;
 import java.awt.Dimension;
+import model.Auxiliar;
 import model.Usuario;
 import model.Veiculo;
 
@@ -32,6 +34,8 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
     private String CL_ATUAL = CL_ANALISE;
     private jfPrincipal jfp;
     
+    private Auxiliar aux;
+    AvisoControl ac;
     public jpDetalheVeiculo() {
         initComponents();
         inicializar();
@@ -44,15 +48,14 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
         txtPlacaPrincipal.setText(veiculo.getPlaca());
         adicionarJPanels(CL_ANALISE);
     }
-    private void Teste(){
-        this.usuario = new UsuarioControl().getUsuarioById(1);
-        this.veiculo = new VeiculoControl().getVeiculoByPlaca("um");
-    }
     private void inicializar(){
-        this.veiculo = new Veiculo();
-        this.usuario = new Usuario();
-        jfp = new jfPrincipal();
         initComponents();
+        //this.veiculo = new Veiculo();
+        this.usuario = new Usuario();
+        aux = new Auxiliar();
+        jfp = new jfPrincipal();
+        ac = new AvisoControl();
+        
         atualizarTamanhoBotoes();
         //adicionarJPanels();
     }
@@ -85,10 +88,13 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
                 case CL_MANUTENCAO:
                     jpCoringa.add(CL_MANUTENCAO, new jpCustoManutencao(usuario, veiculo));
                     break;
+                case CL_AVISO:
+                    jpCoringa.add(CL_AVISO, new jpAvisos(veiculo));
+                    break;
             }
             jpCoringa.add(CL_ANALISE, new jpCustoAtual(veiculo));
         }catch (Exception e){
-            throw new RuntimeException();
+            aux.RegistrarLog(e.getMessage(), "jpDetalheVeiculo.adicionarJPanels");
         }
     }
     
@@ -119,17 +125,23 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         txtPlacaPrincipal = new javax.swing.JTextField();
         jpBotoes = new javax.swing.JPanel();
-        btnQuilometragem = new javax.swing.JLabel();
-        btnManutencao = new javax.swing.JLabel();
-        btnPneus = new javax.swing.JLabel();
-        btnOleo = new javax.swing.JLabel();
-        btnFreios = new javax.swing.JLabel();
         btnAnaliseCustos = new javax.swing.JLabel();
-        btnAvisos = new javax.swing.JLabel();
+        btnQuilometragem = new javax.swing.JLabel();
         btnAbastecimento = new javax.swing.JLabel();
+        btnOleo = new javax.swing.JLabel();
+        btnPneus = new javax.swing.JLabel();
+        btnManutencao = new javax.swing.JLabel();
+        btnFreios = new javax.swing.JLabel();
+        jpAvisos = new javax.swing.JPanel();
+        lblNAvisos = new javax.swing.JLabel();
+        btnAvisos = new javax.swing.JLabel();
         btnProcurar = new javax.swing.JButton();
         btnDetalhes = new javax.swing.JButton();
         jpCoringa = new javax.swing.JPanel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jpTopo.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel1.setText("Placa");
@@ -137,82 +149,13 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
         txtPlacaPrincipal.setText("DLH 8655");
 
         jpBotoes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpBotoes.setPreferredSize(new java.awt.Dimension(755, 87));
         jpBotoes.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentResized(java.awt.event.ComponentEvent evt) {
                 jpBotoesComponentResized(evt);
             }
         });
-
-        btnQuilometragem.setBackground(new java.awt.Color(51, 51, 51));
-        btnQuilometragem.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
-        btnQuilometragem.setForeground(new java.awt.Color(255, 255, 255));
-        btnQuilometragem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnQuilometragem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/quilometragemB.png"))); // NOI18N
-        btnQuilometragem.setText("Quilometragem");
-        btnQuilometragem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnQuilometragem.setOpaque(true);
-        btnQuilometragem.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btnQuilometragem.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnQuilometragemMouseClicked(evt);
-            }
-        });
-
-        btnManutencao.setBackground(new java.awt.Color(180, 180, 180));
-        btnManutencao.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
-        btnManutencao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnManutencao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/manutencao.png"))); // NOI18N
-        btnManutencao.setText("Manutenção");
-        btnManutencao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnManutencao.setOpaque(true);
-        btnManutencao.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btnManutencao.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnManutencaoMouseClicked(evt);
-            }
-        });
-
-        btnPneus.setBackground(new java.awt.Color(204, 204, 204));
-        btnPneus.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
-        btnPneus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnPneus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/pneu.png"))); // NOI18N
-        btnPneus.setText("Pneus");
-        btnPneus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnPneus.setOpaque(true);
-        btnPneus.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btnPneus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnPneusMouseClicked(evt);
-            }
-        });
-
-        btnOleo.setBackground(new java.awt.Color(153, 153, 153));
-        btnOleo.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
-        btnOleo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnOleo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/oleo.png"))); // NOI18N
-        btnOleo.setText("Óleo e Filtro");
-        btnOleo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnOleo.setOpaque(true);
-        btnOleo.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btnOleo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnOleoMouseClicked(evt);
-            }
-        });
-
-        btnFreios.setBackground(new java.awt.Color(230, 230, 230));
-        btnFreios.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
-        btnFreios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnFreios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/freio.png"))); // NOI18N
-        btnFreios.setText("Freios");
-        btnFreios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnFreios.setOpaque(true);
-        btnFreios.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btnFreios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnFreiosMouseClicked(evt);
-            }
-        });
+        jpBotoes.setLayout(new java.awt.GridLayout(1, 0));
 
         btnAnaliseCustos.setBackground(new java.awt.Color(0, 0, 0));
         btnAnaliseCustos.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
@@ -228,15 +171,23 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
                 btnAnaliseCustosMouseClicked(evt);
             }
         });
+        jpBotoes.add(btnAnaliseCustos);
 
-        btnAvisos.setBackground(new java.awt.Color(255, 255, 255));
-        btnAvisos.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
-        btnAvisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnAvisos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/tarefaspendentes.png"))); // NOI18N
-        btnAvisos.setText("Avisos/Notificações");
-        btnAvisos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAvisos.setOpaque(true);
-        btnAvisos.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnQuilometragem.setBackground(new java.awt.Color(51, 51, 51));
+        btnQuilometragem.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
+        btnQuilometragem.setForeground(new java.awt.Color(255, 255, 255));
+        btnQuilometragem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnQuilometragem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/quilometragemB.png"))); // NOI18N
+        btnQuilometragem.setText("Quilometragem");
+        btnQuilometragem.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnQuilometragem.setOpaque(true);
+        btnQuilometragem.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnQuilometragem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnQuilometragemMouseClicked(evt);
+            }
+        });
+        jpBotoes.add(btnQuilometragem);
 
         btnAbastecimento.setBackground(new java.awt.Color(102, 102, 102));
         btnAbastecimento.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
@@ -252,45 +203,99 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
                 btnAbastecimentoMouseClicked(evt);
             }
         });
+        jpBotoes.add(btnAbastecimento);
 
-        javax.swing.GroupLayout jpBotoesLayout = new javax.swing.GroupLayout(jpBotoes);
-        jpBotoes.setLayout(jpBotoesLayout);
-        jpBotoesLayout.setHorizontalGroup(
-            jpBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpBotoesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnAnaliseCustos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(9, 9, 9)
-                .addComponent(btnQuilometragem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(11, 11, 11)
-                .addComponent(btnAbastecimento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnOleo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnManutencao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(11, 11, 11)
-                .addComponent(btnPneus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnFreios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnAvisos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jpBotoesLayout.setVerticalGroup(
-            jpBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpBotoesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jpBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnFreios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAnaliseCustos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManutencao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnQuilometragem, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPneus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnOleo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAbastecimento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAvisos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(14, 14, 14))
-        );
+        btnOleo.setBackground(new java.awt.Color(153, 153, 153));
+        btnOleo.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
+        btnOleo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnOleo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/oleo.png"))); // NOI18N
+        btnOleo.setText("Óleo e Filtro");
+        btnOleo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnOleo.setOpaque(true);
+        btnOleo.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnOleo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnOleoMouseClicked(evt);
+            }
+        });
+        jpBotoes.add(btnOleo);
+
+        btnPneus.setBackground(new java.awt.Color(204, 204, 204));
+        btnPneus.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
+        btnPneus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnPneus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/pneu.png"))); // NOI18N
+        btnPneus.setText("Pneus");
+        btnPneus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPneus.setOpaque(true);
+        btnPneus.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnPneus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPneusMouseClicked(evt);
+            }
+        });
+        jpBotoes.add(btnPneus);
+
+        btnManutencao.setBackground(new java.awt.Color(180, 180, 180));
+        btnManutencao.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
+        btnManutencao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnManutencao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/manutencao.png"))); // NOI18N
+        btnManutencao.setText("Manutenção");
+        btnManutencao.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnManutencao.setOpaque(true);
+        btnManutencao.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnManutencao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnManutencaoMouseClicked(evt);
+            }
+        });
+        jpBotoes.add(btnManutencao);
+
+        btnFreios.setBackground(new java.awt.Color(230, 230, 230));
+        btnFreios.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
+        btnFreios.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnFreios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/freio.png"))); // NOI18N
+        btnFreios.setText("Freios");
+        btnFreios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFreios.setOpaque(true);
+        btnFreios.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnFreios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFreiosMouseClicked(evt);
+            }
+        });
+        jpBotoes.add(btnFreios);
+
+        jpAvisos.setLayout(new java.awt.BorderLayout());
+
+        lblNAvisos.setBackground(new java.awt.Color(255, 255, 255));
+        lblNAvisos.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        lblNAvisos.setForeground(new java.awt.Color(255, 0, 0));
+        lblNAvisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNAvisos.setText("100");
+        lblNAvisos.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        lblNAvisos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblNAvisos.setOpaque(true);
+        lblNAvisos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jpAvisos.add(lblNAvisos, java.awt.BorderLayout.PAGE_END);
+        lblNAvisos.getAccessibleContext().setAccessibleDescription("");
+        lblNAvisos.getAccessibleContext().setAccessibleParent(this);
+
+        btnAvisos.setBackground(new java.awt.Color(255, 255, 255));
+        btnAvisos.setFont(new java.awt.Font("Verdana", 3, 11)); // NOI18N
+        btnAvisos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAvisos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/tarefaspendentes.png"))); // NOI18N
+        btnAvisos.setText("Avisos/Notificações");
+        btnAvisos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAvisos.setOpaque(true);
+        btnAvisos.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnAvisos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAvisosMouseClicked(evt);
+            }
+        });
+        jpAvisos.add(btnAvisos, java.awt.BorderLayout.CENTER);
+
+        jpBotoes.add(jpAvisos);
 
         btnProcurar.setBackground(new java.awt.Color(255, 64, 129));
         btnProcurar.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
@@ -328,9 +333,7 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDetalhes)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jpTopoLayout.createSequentialGroup()
-                .addComponent(jpBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
+            .addComponent(jpBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpTopoLayout.setVerticalGroup(
             jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,10 +345,11 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
                     .addComponent(btnProcurar)
                     .addComponent(btnDetalhes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(367, 367, 367))
+                .addComponent(jpBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(280, 280, 280))
         );
 
+        jpCoringa.setBackground(new java.awt.Color(255, 255, 255));
         jpCoringa.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -394,56 +398,20 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
     }//GEN-LAST:event_btnProcurarActionPerformed
     private void atualizarTamanhoBotoes(){
         try{
-            int x, y;
-            int largura = this.getWidth();
-            int altura = 85;
-            jpBotoes.setSize(largura, altura+15);
-            jpBotoes.setPreferredSize(new Dimension(largura, altura+15));
-            //largura = largura / 6; //sem o botão de pneu
-            largura = largura / 7;
-
-            x = btnAnaliseCustos.getX()-2;
-            y = btnAnaliseCustos.getY()-2;
-
-            btnAnaliseCustos.setLocation(x, y);
-            x +=largura;
-            btnQuilometragem.setLocation(x, y);
-            x +=largura;
-            btnAbastecimento.setLocation(x, y);
-            x +=largura;
-            btnOleo.setLocation(x, y);
-            x +=largura;
-            btnManutencao.setLocation(x, y);
-            x +=largura;
-            btnPneus.setLocation(x, y);
-            x +=largura;
-            //btnFreios.setLocation(x, y);
-            //x +=largura;
-            btnAvisos.setLocation(x, y);
-
-            btnAnaliseCustos.setSize(largura, altura);
-            btnAnaliseCustos.setPreferredSize(new Dimension(largura, altura));
-            btnQuilometragem.setSize(largura, altura);
-            btnQuilometragem.setPreferredSize(new Dimension(largura, altura));
-            btnAbastecimento.setSize(largura,altura);
-            btnAbastecimento.setPreferredSize(new Dimension(largura, altura));
-            btnManutencao.setSize(largura,altura);
-            btnManutencao.setPreferredSize(new Dimension(largura, altura));
-            btnOleo.setSize(largura, altura);
-            btnOleo.setPreferredSize(new Dimension(largura, altura));
-            
-            btnPneus.setSize(largura, altura);
-            btnPneus.setPreferredSize(new Dimension(largura, altura));
-            /*btnFreios.setSize(largura, altura);
-            btnFreios.setPreferredSize(new Dimension(largura, altura));
-            */btnAvisos.setSize(largura, altura);
-            btnAvisos.setPreferredSize(new Dimension(largura, altura));
-
+            atualizarNAvisos();
+            jpBotoes.remove(btnFreios);
+            jpBotoes.revalidate();
         }catch(Exception e){
-            throw new RuntimeException();
+            aux.RegistrarLog(e.getMessage(), "jpDetalhes.atualizarTamanhoBotoes");
         }
         
     }
+    public void atualizarNAvisos(){
+        if(veiculo !=null){
+            lblNAvisos.setText(ac.getNAtivosByIdVeiculo(veiculo.getId())+"");
+        }
+    }
+   
     private void jpBotoesComponentResized(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jpBotoesComponentResized
         atualizarTamanhoBotoes();
     }//GEN-LAST:event_jpBotoesComponentResized
@@ -454,10 +422,14 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
 
     private void btnDetalhesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetalhesActionPerformed
         if(veiculo.getId()!=0){
-            jfp.AtualizarContentPane(new jpCadastroVeiculo(veiculo));
+            jfp.AtualizarContentPane(new jpCadastroVeiculo(jfp, veiculo));
         }
 
     }//GEN-LAST:event_btnDetalhesActionPerformed
+
+    private void btnAvisosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAvisosMouseClicked
+        TrocarPanelCoringa(CL_AVISO);
+    }//GEN-LAST:event_btnAvisosMouseClicked
     private void PesquisarPlaca(){
         try{
             Veiculo v = new VeiculoControl().getVeiculoByPlaca(txtPlacaPrincipal.getText());
@@ -465,9 +437,10 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
                 this.veiculo = v;
                 txtPlacaPrincipal.setText(this.veiculo.getPlaca());
                 adicionarJPanels(CL_ATUAL);
+                atualizarNAvisos();
             }
         }catch (Exception e){
-            
+            aux.RegistrarLog(e.getMessage(), "jpDetalheVeiculo.PesquisarPlaca");
         }
     }
 
@@ -483,9 +456,11 @@ public class jpDetalheVeiculo extends javax.swing.JPanel {
     private javax.swing.JButton btnProcurar;
     private javax.swing.JLabel btnQuilometragem;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jpAvisos;
     private javax.swing.JPanel jpBotoes;
     private javax.swing.JPanel jpCoringa;
     private javax.swing.JPanel jpTopo;
+    private javax.swing.JLabel lblNAvisos;
     private javax.swing.JTextField txtPlacaPrincipal;
     // End of variables declaration//GEN-END:variables
 }

@@ -47,7 +47,7 @@ public class jfCadastroManutencao extends JFrame{
         arraylist = new ArrayList<Manutencao>();
         aux = new Auxiliar();
         mCtrl = new ManutencaoControl();
-        veiculo = new Veiculo();
+        //veiculo = new Veiculo();
         vkmCtrol = new VeiculoKMControl();
         usuario = new Usuario();
         jTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
@@ -191,6 +191,7 @@ public class jfCadastroManutencao extends JFrame{
         jLabel1.setOpaque(true);
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("ID:");
 
         jtxfId.setEditable(false);
@@ -219,11 +220,13 @@ public class jfCadastroManutencao extends JFrame{
         });
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("Oficina");
 
         jtxfOficina.setText("TechFil");
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel4.setText("Valor");
 
@@ -235,11 +238,13 @@ public class jfCadastroManutencao extends JFrame{
         });
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Serviço");
 
         jtxfServico.setText("xyz");
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Placa ");
 
         jtxfPlaca.setEditable(false);
@@ -253,6 +258,7 @@ public class jfCadastroManutencao extends JFrame{
         });
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("KM");
 
         jtxfData.setText("02/01/2021");
@@ -268,6 +274,7 @@ public class jfCadastroManutencao extends JFrame{
         });
 
         jLabel10.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Data");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -330,7 +337,7 @@ public class jfCadastroManutencao extends JFrame{
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registros", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 11), new java.awt.Color(117, 117, 117))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registros", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -362,6 +369,7 @@ public class jfCadastroManutencao extends JFrame{
         );
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("KM Atual");
 
         jtxfKmAtual.setEditable(false);
@@ -475,10 +483,7 @@ public class jfCadastroManutencao extends JFrame{
             evt.consume();
         }
     }//GEN-LAST:event_jtxfValorKeyTyped
-    public static void main(String[] args) {
-        new jfCadastroManutencao().setVisible(true);
-    }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnSalvar;

@@ -74,7 +74,17 @@ public class Pedido {
         return c.getTime();
     }
     public String getDataString(){
-        return getDia()+"/"+(getMes()+1)+"/"+getAno();
+        String data = "";
+        int dia = getDia();
+        int mes = getMes();
+        data+= dia<10 ? "0"+dia+"/": dia+"/";
+        data+= mes<10 ? "0"+mes+"/": mes+"/";
+        data+=getAno();
+        return data;
+        //return getDia()+"/"+(getMes()+1)+"/"+getAno();
+    }
+    public String getDataHoraString(){
+        return getDataString()+" "+getTempo();
     }
     public int getDia(){
         Calendar c = new GregorianCalendar();
@@ -84,12 +94,18 @@ public class Pedido {
     public int getMes(){
         Calendar c = new GregorianCalendar();
         c.setTimeInMillis(timeMili);
-        return c.get(Calendar.MONTH);
+        return (c.get(Calendar.MONTH)+1);
     }
     public int getAno(){
         Calendar c = new GregorianCalendar();
         c.setTimeInMillis(timeMili);
         return c.get(Calendar.YEAR);
+    }
+
+    private String getTempo() {
+        Calendar c = new GregorianCalendar();
+        c.setTimeInMillis(timeMili);
+        return c.get(Calendar.HOUR_OF_DAY)+":"+c.get(Calendar.MINUTE);
     }
     
     

@@ -1,44 +1,49 @@
 
 package model;
 
-public class Veiculo {
+public abstract class Veiculo {
+
+    public abstract String[] getConfLabels();
+    public static int[] QTDE_EIXOS;
 
     private int id=0;
     private String placa="";
     private String data="";
     private String marca="";
     private String modelo="";
-    private String tipo="";
+    private int tipo=0;
     private String carroceria="";
     private int configuracao=0;
     private String info="";
     private int ano=0;
     private int combustivel = 0;
-    private static int conf4x2 = 0;
-    private static int conf4x4 = 1;
-    private static int conf6x2 = 2;
-    private static int conf8x2 = 3;
-    private static int conf8x4 = 4;
-    private static int conf2x1 = 5;
-    public static final String[] confLabels={"4x2","4x4","6x2","8x2","8x4","2x1"};
+    private VeiculoConfiguracao veiculoConfiguracao;
+  
+    public static final String [] TIPOS_STRING = {"Caminhão", "Carro", "Moto", "Engate", "Outro"};
+    public static final int CAMINHAO = 0, CARRO = 1, MOTO=2, ENGATE =3, OUTRO_VEICULO = 4;
+    
     public static final String[] COMBUSTIVEIS = {"Flex", "Gasolina", "Etanol", "Diesel", "Outro"};
-    public static final int FLEX = 0, GASOLINA = 1, ETANOL = 2, DIESEL = 3, OUTRO = 4;
+    public static final int FLEX = 0, GASOLINA = 1, ETANOL = 2, DIESEL = 3, OUTRO_COMBUSTIVEL = 4;
+    public int[] QTDE_PNEUS;
     
     public Veiculo(){
-        
+        preencherPadrao();
     }
+    
     public void preencherPadrao(){
         setPlaca("placa");
         setMarca("marca");
         setModelo("modelo");
-        setTipo("tipo");
-        setConfiguracao(conf4x2);
+        //setTipo(0);
+        //setConfiguracao(conf4x2);
+        //setVeiculoConfiguracao(veiculoConfiguracaoArray[conf4x2]);
         setId(0);
         setInfo("info");
         setCarroceria("carroceria");
         setAno(2020);
     }
-    
+    public abstract int getQtdePneu();
+    public abstract VeiculoConfiguracao getVeiculoConfiguracaoByIndex(int index);
     public int getId() {
         return id;
     }
@@ -71,11 +76,11 @@ public class Veiculo {
         this.modelo = modelo;
     }
     
-    public String getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(int tipo) {
         this.tipo = tipo;
     }
 
@@ -126,5 +131,22 @@ public class Veiculo {
     public void setCombustivel(int combustivel) {
         this.combustivel = combustivel;
     }
+
+    public VeiculoConfiguracao getVeiculoConfiguracao() {
+        return veiculoConfiguracao;
+    }
+
+    public void setVeiculoConfiguracao(VeiculoConfiguracao veiculoConfiguracao) {
+        this.veiculoConfiguracao = veiculoConfiguracao;
+    }
+
+    public abstract String getConfiguracaoLabel();
+
+    public String getTipoLabel() {
+        return TIPOS_STRING[getTipo()];
+    }
+        
+
+    
     
 }

@@ -2,6 +2,13 @@ package model;
 
 public class GraficoItem {
 
+    public GraficoItem(){
+        
+    }
+    public GraficoItem(String nome, int valor){
+        setNome(nome);
+        setValor(valor);
+    }
     public String getNome() {
         return nome;
     }

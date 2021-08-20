@@ -181,5 +181,30 @@ public class ItemDAO extends  ConectionDAO{
             return arraylist;
         }
     }
+
+    public int getIdByMarcaModelo(String marca, String modelo) {
+         AbrirConexao();
+        String sql = "SELECT * FROM "+TB_ITEM+" WHERE "+MARCA+" = '"+marca
+                                                +"' AND " + MODELO + " = '"+modelo+"'";
+        Item item = new Item();
+               
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                item.setId(resultSet.getInt(ID));
+                item.setTipo(resultSet.getInt(TIPO));
+                item.setMarca(resultSet.getString(MARCA));
+                item.setModelo(resultSet.getString(MODELO));
+                item.setValor(resultSet.getFloat(VALOR));
+                item.setInfo(resultSet.getString(INFO));
+            }
+        }catch (Exception e){
+            aux.RegistrarLog(e.getMessage(), "ItemDAO.getIdByMarcaModelo");
+        }finally{
+            FecharConexao();
+            return item.getId();
+        }
+    }
        
 }

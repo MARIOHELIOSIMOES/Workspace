@@ -247,8 +247,8 @@ public class jpHistorico extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel16)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblDataH, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(27, 27, 27)
+                                .addComponent(lblDataH, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel14)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblQuantidadeH, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -372,7 +372,8 @@ public class jpHistorico extends javax.swing.JPanel {
             lblRestauranteH.setText(""+ new RestauranteDAO().PesquisarById(pedidoArrayList.get(i).getIdRestaurante()).getNome());
             lblQuantidadeH.setText(pedidoArrayList.get(i).getQuantidade()+"");
             lblNPedido.setText(""+pedidoArrayList.get(i).getId());
-            lblDataH.setText(pedidoArrayList.get(i).getDataString());
+            //lblDataH.setText(pedidoArrayList.get(i).getDataString());
+            lblDataH.setText(pedidoArrayList.get(i).getDataHoraString());
         }
     }
     private void pesquisarPedidos(){

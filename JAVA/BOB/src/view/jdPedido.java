@@ -40,7 +40,7 @@ public class jdPedido extends javax.swing.JDialog {
     private void inicializar(){
         initComponents();
         arraylist = new ArrayList<PedidoItem>();
-        veiculo = new Veiculo();
+        //veiculo = new Veiculo();
         usuario = new Usuario();
         aux = new Auxiliar();
     }
@@ -114,18 +114,19 @@ public class jdPedido extends javax.swing.JDialog {
         jLabel1.setText("Detalhes do Pedido");
         jLabel1.setOpaque(true);
 
-        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("ID");
 
         txfId.setEditable(false);
         txfId.setText("15");
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Data");
 
         btnExcluir.setBackground(new java.awt.Color(255, 64, 129));
         btnExcluir.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/maisp.png"))); // NOI18N
         btnExcluir.setText("Excluir");
         btnExcluir.setMaximumSize(new java.awt.Dimension(97, 27));
         btnExcluir.setMinimumSize(new java.awt.Dimension(97, 27));
@@ -139,22 +140,25 @@ public class jdPedido extends javax.swing.JDialog {
         txfPlaca.setEditable(false);
         txfPlaca.setText("DLH-8657");
 
-        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Placa do Veículo");
 
         txfData.setEditable(false);
         txfData.setText("20/12/2020");
 
-        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("Informação");
 
         txfValor.setEditable(false);
         txfValor.setText("150,50");
 
-        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Valor");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Itens", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 12))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Itens", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Verdana", 1, 10), new java.awt.Color(127, 127, 127))); // NOI18N
 
         jList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jList);
@@ -170,7 +174,8 @@ public class jdPedido extends javax.swing.JDialog {
             .addComponent(jScrollPane2)
         );
 
-        jLabel13.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setText("KM ");
 
         txfKm.setEditable(false);
@@ -217,7 +222,7 @@ public class jdPedido extends javax.swing.JDialog {
                         .addComponent(jLabel8)
                         .addGap(18, 18, 18)
                         .addComponent(txfPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
                         .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
@@ -251,6 +256,10 @@ public class jdPedido extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        if(!jfPrincipal.isUserAdmin()){
+            aux.showMessagemSemPermissao();
+            return;
+        } 
         try{
             String id = aux.InputText("Informe o ID do pedido para confirmar a exclusão!");
             if(id.trim().equalsIgnoreCase(txfId.getText().trim())){

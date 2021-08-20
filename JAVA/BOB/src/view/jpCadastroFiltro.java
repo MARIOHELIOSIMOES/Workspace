@@ -3,6 +3,7 @@ package view;
 import control.ItemControl;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import model.Auxiliar;
 import model.Item;
 
 /**
@@ -14,6 +15,8 @@ public class jpCadastroFiltro extends javax.swing.JPanel {
     private int tipo = 0;
     private int[] tipos;
     ArrayList<Item> arraylist;
+    Auxiliar aux;
+    
     public jpCadastroFiltro() {
         inicializar();
     }
@@ -22,6 +25,7 @@ public class jpCadastroFiltro extends javax.swing.JPanel {
         initComponents();
         preencherCbbTipo();
         limparCampos();
+        aux = new Auxiliar();
     }
     private void limparCampos(){
         txfId.setText(""+0);
@@ -122,12 +126,14 @@ public class jpCadastroFiltro extends javax.swing.JPanel {
         jLabel1.setOpaque(true);
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("ID:");
 
         txfId.setEditable(false);
         txfId.setText("51524");
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("Lista de Cadastrados");
 
         jList.setModel(new javax.swing.AbstractListModel<String>() {
@@ -165,22 +171,26 @@ public class jpCadastroFiltro extends javax.swing.JPanel {
         });
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("Marca");
 
         txfMarca.setText("TechFil");
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/dinheirop.png"))); // NOI18N
         jLabel4.setText("Valor");
 
         txfValor.setText("20,50");
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Modelo");
 
         txfModelo.setText("xyz");
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("Observação");
 
         txaInfo.setColumns(20);
@@ -190,6 +200,7 @@ public class jpCadastroFiltro extends javax.swing.JPanel {
         cbbTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Tipo");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -298,6 +309,11 @@ public class jpCadastroFiltro extends javax.swing.JPanel {
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+
+        if(!jfPrincipal.isUserOperaOrAdmin()){
+            aux.showMessagemSemPermissao();
+            return;
+        }
         String id, marca, modelo, valor,info;
         
         id = txfId.getText();

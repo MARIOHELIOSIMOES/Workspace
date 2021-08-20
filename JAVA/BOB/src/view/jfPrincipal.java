@@ -24,28 +24,66 @@ public class jfPrincipal extends javax.swing.JFrame {
     private static final String CL_FREIO = "CL7";
     private static final String CL_AVISO = "CL8";
     private static final String CL_MANUTENCAO = "CL9";
-    private Usuario usuario = new Usuario();
+    
+    private static Usuario usuario;
+    private static Integer nivelUsuario;
+    
+    private Auxiliar aux;
+    public static Usuario getUsuario(){
+        return usuario;
+    }
     
     public jfPrincipal() {
         inicializar();
     }
-    public jfPrincipal(Veiculo veiculo){
+    public jfPrincipal(Usuario u){
         inicializar();
-    }
-    public jfPrincipal(Usuario usuario){
-        this.usuario = usuario;
-        inicializar();
-    }
-    private void inicializar(){
-        initComponents();
-        usuarioTeste();//preencher usuário de teste, esse usuário deve vir do Login
+        //this.usuario = usuario;
+        setUsuario(u);
         setContentPane(new jpGeral(this, usuario));
         revalidate();
+    }
+    public static void setUsuario(final Usuario u){
+        usuario = u;
+        nivelUsuario = u.getTipo();
+    }
+    public static int getNivelUsuario(){
+        return nivelUsuario;
+    }
+    public static boolean isUserAdmin(){
+        if(getNivelUsuario()==Usuario.ADMIN){
+            return true;
+        }
+        return false;
+    }
+    public static boolean isUserVisua(){
+        if(getNivelUsuario()==Usuario.VISUA){
+            return true;
+        }
+        return false;
+    }
+    public static boolean isUserOpera(){
+        if(getNivelUsuario()==Usuario.OPERA){
+            return true;
+        }
+        return false;
+    }
+    public static boolean isUserOperaOrAdmin(){
+        if(getNivelUsuario()==Usuario.ADMIN || getNivelUsuario()==Usuario.OPERA){
+            return true;
+        }
+        return false;
+    }
+    
+    
+    private void inicializar(){
+        initComponents();
+        aux = new Auxiliar();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
+        usuario = new Usuario();
+      
     }
-    private void usuarioTeste(){
-        this.usuario = new UsuarioControl().getUsuarioById(1);
-    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -58,14 +96,17 @@ public class jfPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu4 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,6 +131,19 @@ public class jfPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu4);
 
         jMenu1.setText("Arquivo");
+
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem7.setText("Estoque");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem7);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Editar");
 
         jMenu3.setText("Cadastro");
 
@@ -138,15 +192,28 @@ public class jfPrincipal extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem5);
 
-        jMenu1.add(jMenu3);
+        jMenu2.add(jMenu3);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem7.setText("Estoque");
-        jMenu1.add(jMenuItem7);
+        jMenu5.setText("Usuario");
 
-        jMenuBar1.add(jMenu1);
+        jMenuItem6.setText("Alterar Senha");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem6);
 
-        jMenu2.setText("Editar");
+        jMenuItem8.setText("Gerenciar Usuários");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem8);
+
+        jMenu2.add(jMenu5);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -205,6 +272,25 @@ public class jfPrincipal extends javax.swing.JFrame {
         setContentPane(new jpCadastroPneu());
         revalidate();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+       
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        setContentPane(new jpAlterarUsuario(usuario));
+        revalidate();
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        if(!jfPrincipal.isUserAdmin()){
+            aux.showMessagemSemPermissao();
+            return;
+            
+        }
+        setContentPane(new jpGerenciarUsuarios(usuario));
+        revalidate();
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
     
     public static void main(String args[]) {
        new jfPrincipal().setVisible(true);
@@ -215,12 +301,15 @@ public class jfPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,4 @@
-# Projetos Publicos
+# Workspace - Portifólio de projetos
 Seja bem-vindo(a)!
 
 Este repositório é destinado a exposição de alguns trabalhos e projetos pessoais com o intuito de compartilhar conhecimento e demonstrar minha parte técnica e experiências.

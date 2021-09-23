@@ -10,7 +10,7 @@ public class Lotofacil {
         this.jogos = new int[nJogos][15];
         for (int i = 0; i< nJogos; i++){
             jogos[i]= gerarNumeros();
-            imprimirJogo(jogos[i]);
+                imprimirJogo(jogos[i]);
         }
     }
     public void imprimirJogo(int [] jogo){
@@ -18,6 +18,14 @@ public class Lotofacil {
             System.out.print(((i<=9)?("0"+i): i) +" | ");
         }
         System.out.println("\n-------------------------------------------------------------------------------------");
+    }
+    private boolean identico(int[] jogo){
+        for (int[] j : jogos){
+            if (j.equals(jogo)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void main(String[] args) {
